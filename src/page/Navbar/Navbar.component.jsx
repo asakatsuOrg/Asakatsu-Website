@@ -5,6 +5,8 @@ import { Outlet, Link } from 'react-router-dom'
 
 import Contributors from '../../context/Profile.json'
 
+import MenuIcon from '@mui/icons-material/Menu';
+
 const Navbar = () => {
     return (
         <Fragment>
