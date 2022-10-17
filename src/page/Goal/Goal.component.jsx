@@ -18,13 +18,18 @@ const Profile = () => {
 
     return (
         <div className='goal'>
-            { findingProfile ? <User info={ findingProfile } /> : <Intro projectName={Project} /> }
-            { findingProfile.goals ? 
+            { findingProfile ? 
                 <div>
-                    <h1>Goal</h1>
-                    <Goal goalInfo={findingProfile.goals} />
+                    <User info={ findingProfile } /> 
+                    { findingProfile.goals ? 
+                        <div>
+                            <h1>Goal</h1>
+                            <Goal goalInfo={findingProfile.goals} />
+                        </div>
+                    : "" }
                 </div>
-            : "" }
+            : <Intro projectName={Project} /> }
+            
         </div>
     )
 }
