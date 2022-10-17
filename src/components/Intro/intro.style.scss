@@ -1,0 +1,26 @@
+.intro {
+    text-align: center;
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: var(--primary-color);
+        font-size: 5em;
+        font-weight: 900;
+    }
+
+    p {
+        padding: 1em 10em;
+    }
+
+    a {
+
+        .button {
+            background-color: var(--primary-color);
+        }
+    }
+}

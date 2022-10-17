@@ -1,0 +1,26 @@
+.user {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+
+    img {
+        width: 50px;
+        border-radius: 50%;
+    }
+
+    div {
+
+        p {
+            line-height: 1;
+        }
+
+        a {
+            font-size: 12px;
+            color: var(--primary-color);
+
+            &:hover {
+                text-decoration: 1px underline var(--primary-color);
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+nav {
+    width: 200px;
+    height: 100vh;
+    background-color: var(--background-color-2);
+    position: fixed;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #dadada;
+    }
+
+    h1 {
+        font-size: 18px;
+        padding: 1em 1em 0;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        gap: .4em;
+
+        .names {
+            padding: .1em .4em;
+            border-radius: .3em;
+
+            &:hover {
+                background-color: #dadada;
+            }
+        }
+    }
+}
