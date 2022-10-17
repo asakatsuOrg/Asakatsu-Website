@@ -2,10 +2,7 @@
     {
         "name": "Avie",
         "profileImg": "https://github.com/avie-dev.png",
-        "github": "https://github.com/avie-dev",
-        "goals": [
-            
-        ]
+        "github": "https://github.com/avie-dev"
     },
     {
         "name": "Philips",
@@ -15,6 +12,20 @@
     {
         "name": "Ali Reza",
         "profileImg": "https://github.com/AliReza1083.png",
-        "github": "https://github.com/AliReza1083"
+        "github": "https://github.com/AliReza1083",
+        "goals": [
+            {
+                "goal": "Learn React",
+                "step_to_achieve_it": ["work hard", "do everything", "add more or delete this item"],
+                "target_date": "mm/dd/yyy",
+                "completed": true
+            },
+            {
+                "goal": "Learn React",
+                "step_to_achieve_it": ["work hard", "do everything"],
+                "target_date": "mm/dd/yyy",
+                "completed": false
+            }
+        ]
     }
 ]

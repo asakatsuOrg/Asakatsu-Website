@@ -4,6 +4,7 @@ import './Goal.style.scss'
 import ProfileData from '../../context/Profile.json'
 import Intro from '../../components/Intro/intro.component'
 import User from '../../components/user/user.component'
+import Goal from '../../components/each goal/eachgoal.component'
 
 const Profile = () => {
 
@@ -18,6 +19,12 @@ const Profile = () => {
     return (
         <div className='goal'>
             { findingProfile ? <User info={ findingProfile } /> : <Intro projectName={Project} /> }
+            { findingProfile.goals ? 
+                <div>
+                    <h1>Goal</h1>
+                    <Goal goalInfo={findingProfile.goals} />
+                </div>
+            : "" }
         </div>
     )
 }

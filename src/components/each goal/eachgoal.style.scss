@@ -1,0 +1,28 @@
+.eachGoal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    align-items: start;
+    margin-top: .5em;
+
+    div {
+        background-color: var(--background-color-2);
+        padding: 1em;
+        border-radius: .5em;
+        box-shadow: 0 3px 1px rgba(0, 0, 0, 0.359);
+        transition: .3s;
+
+        @media (min-width: 768px) {
+            opacity: .85;
+        }
+
+        &:hover {
+            opacity: 1;
+            transform: translateY(3px);
+        }
+    }
+
+    .completed {
+        background-color: rgba(0, 128, 0, 0.414);
+    }
+}
