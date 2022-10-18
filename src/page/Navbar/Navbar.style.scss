@@ -4,6 +4,8 @@ nav {
     background-color: var(--background-color-2);
     position: fixed;
     overflow: auto;
+    z-index: 9999;
+    transition: .3s;
 
     &::-webkit-scrollbar {
         width: 5px;
@@ -33,8 +35,24 @@ nav {
         }
     }
 
-
     @media (max-width: 768px) {
         transform: translateX(-100%);
+    }
+}
+
+nav[data-toggle='true'] {
+    transform: translateX(0);
+}
+
+
+.openNavbar {
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+    transition: .3s;
+    z-index: 999;
+
+    @media (min-width: 768px) {
+        display: none;
     }
 }
