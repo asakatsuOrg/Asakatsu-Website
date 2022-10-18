@@ -1,0 +1,16 @@
+.noGoal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+
+    h1 {
+        font-weight: bolder;
+    }
+
+    svg {
+        max-width: 400px;
+    }
+}

@@ -13,10 +13,12 @@
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.9",
+    "gsap": "^3.11.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.2",
-    "sass": "^1.55.0"
+    "sass": "^1.55.0",
+    "vite-plugin-svgr": "^2.2.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",

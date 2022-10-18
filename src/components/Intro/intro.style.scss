@@ -11,14 +11,20 @@
         color: var(--primary-color);
         font-size: 5em;
         font-weight: 900;
+        opacity: 0;
+        transform: translateX(-80px);
     }
 
     p {
         padding: 1em 10em;
+        opacity: 0;
+        transform: translateX(-80px);
     }
 
     a {
-
+        opacity: 0;
+        transform: translateX(-80px);
+        
         .button {
             background-color: var(--primary-color);
         }
