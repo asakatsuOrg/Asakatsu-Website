@@ -3,20 +3,9 @@
     align-items: center;
     gap: .5em;
 
-    div:nth-of-type(1) {
-        position: relative;
-
-        .skeleton {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-
-        img {
-            width: 50px;
-            border-radius: 50%;
-        }
+    img {
+        width: 50px;
+        border-radius: 50%;
     }
 
     div {
