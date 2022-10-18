@@ -50,6 +50,7 @@ nav[data-toggle='true'] {
     bottom: 1em;
     left: 1em;
     transition: .3s;
+    z-index: 999;
 
     @media (min-width: 768px) {
         display: none;
