@@ -4,7 +4,7 @@ import { Fragment } from 'react'
 import { Outlet, Link } from 'react-router-dom'
 import { useState } from 'react'
 
-import Contributors from '../../context/Profile.json'
+import Contributors from '../../../Profile.json'
 
 import MenuIcon from '@mui/icons-material/Menu';
 
