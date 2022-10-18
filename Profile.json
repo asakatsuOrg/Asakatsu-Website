@@ -45,5 +45,19 @@
                 "completed": false
             }
         ]
+    },
+    {
+        "name": "Helper",
+        "profileImg": "https://github.com/Helper2005.png",
+        "github": "https://github.com/Helper2005",
+        "goals": [
+            {
+                "goal": "Testing",
+                "step_to_achieve_it": ["First test everything", "Do everyting"],
+                "target_date": "01/18/2023",
+                "completed": false
+            }
+            }
+        ]
     }
 ]
