@@ -6,8 +6,6 @@ import { useState } from 'react'
 
 import Contributors from '../../../Profile.json'
 
-import MenuIcon from '@mui/icons-material/Menu';
-
 const Navbar = () => {
 
     const [ navbarIcon, setNavbarIcon ] = useState('https://cdn-icons-png.flaticon.com/512/992/992482.png')
