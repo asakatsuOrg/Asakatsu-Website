@@ -46,7 +46,7 @@ nav[data-toggle='true'] {
 
 
 .openNavbar {
-    position: absolute;
+    position: fixed;
     bottom: 1em;
     left: 1em;
     transition: .3s;
