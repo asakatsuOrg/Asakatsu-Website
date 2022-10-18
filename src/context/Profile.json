@@ -18,7 +18,31 @@
                 "goal": "Learn React",
                 "step_to_achieve_it": ["work hard", "do everything", "add more or delete this item"],
                 "target_date": "mm/dd/yyy",
+                "completed": false
+            },
+            {
+                "goal": "Learn React",
+                "step_to_achieve_it": ["work hard", "do everything", "add more or delete this item"],
+                "target_date": "mm/dd/yyy",
                 "completed": true
+            },
+            {
+                "goal": "Learn React",
+                "step_to_achieve_it": ["work hard", "do everything", "add more or delete this item"],
+                "target_date": "mm/dd/yyy",
+                "completed": false
+            },
+            {
+                "goal": "Learn React",
+                "step_to_achieve_it": ["work hard", "do everything", "add more or delete this item"],
+                "target_date": "mm/dd/yyy",
+                "completed": true
+            },
+            {
+                "goal": "Learn React",
+                "step_to_achieve_it": ["work hard", "do everything", "add more or delete this item"],
+                "target_date": "mm/dd/yyy",
+                "completed": false
             }
         ]
     }
