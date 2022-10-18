@@ -3,7 +3,7 @@ import './eachgoal.style.scss'
 // Icons
 import DateRangeIcon from '@mui/icons-material/DateRange';
 
-import Achieve from '../stepAchieve/stepAchieve.component'
+import Achieve from '../stepAchieve.component'
 
 const Goal = ({ goalInfo }) => {
 

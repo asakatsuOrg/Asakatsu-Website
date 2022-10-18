@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import './Goal.style.scss'
 
-import ProfileData from '../../context/Profile.json'
+import ProfileData from '../../../Profile.json'
 import Intro from '../../components/Intro/intro.component'
 import User from '../../components/user/user.component'
 import Goal from '../../components/each goal/eachgoal.component'
