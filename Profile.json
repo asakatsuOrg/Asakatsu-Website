@@ -29,14 +29,6 @@
     },
     {
         "name": "Ali Reza",
-        "githubUsername": "AliReza1083",
-        "goals": [
-            {
-                "goal": "Learn React",
-                "step_to_achieve_it": ["work hard", "do everything", "add more or delete this item"],
-                "target_date": "mm/dd/yyy",
-                "completed": false
-            }
-        ]
+        "githubUsername": "AliReza1083"
     }
 ]
