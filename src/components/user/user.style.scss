@@ -44,13 +44,25 @@
             width: 300px;
             display: none;
             flex-direction: column;
-            gap: .2em;
+            gap: .5em;
             align-items: center;
             text-align: center;
             background-color: var(--background-color-2);
             padding: 1em;
             border-radius: 1em;
             box-shadow: 0 5px 1px rgba(0, 0, 0, 0.408);
+            animation: userExtraInfo .6s;
+
+            @keyframes userExtraInfo {
+                from {
+                    opacity: 0;
+                    transform: translateY(40px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
 
             .name {
                 font-size: 18px;
@@ -64,6 +76,10 @@
                 width: 40px;
                 height: 40px;
                 border-radius: 50%;
+            }
+
+            a {
+                margin-top: 1em;
             }
         }
 
