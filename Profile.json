@@ -1,13 +1,11 @@
 [
     {
         "name": "Avie",
-        "profileImg": "https://github.com/avie-dev.png",
-        "github": "https://github.com/avie-dev"
+        "githubUsername": "avie-dev"
     },
     {
         "name": "Philips",
-        "profileImg": "https://github.com/Kellsonphilips.png",
-        "github": "https://github.com/Kellsonphilips",
+        "githubUsername": "Kellsonphilips",
         "goals": [
            { 
                 "goal": "30 days push-up task",
@@ -31,8 +29,7 @@
     },
     {
         "name": "Ali Reza",
-        "profileImg": "https://github.com/AliReza1083.png",
-        "github": "https://github.com/AliReza1083",
+        "githubUsername": "AliReza1083",
         "goals": [
             {
                 "goal": "Learn React",
