@@ -7,6 +7,7 @@ import Achieve from '../stepAchieve/stepAchieve.component'
 
 const Goal = ({ goalInfo }) => {
 
+
     return (
         <div className='eachGoal'>
             { goalInfo.map(G => {

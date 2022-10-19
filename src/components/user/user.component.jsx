@@ -1,8 +1,11 @@
 import { useState } from 'react'
+import { useEffect } from 'react';
+
 import './user.style.scss'
 
-const User = ({ info }) => {
+const User = ({ info, id }) => {
 
+    const [userInfo, setUserInfo] = useState({}) 
     const [infoImg, setInfoImg] = useState('https://cdn-icons-png.flaticon.com/512/665/665049.png');
     const [openExtraInfo, setOpenExtraInfo] = useState('false')
 
@@ -19,21 +22,28 @@ const User = ({ info }) => {
         }
     }
 
+    useEffect(() => {
+        fetch(`https://api.github.com/users/${info}`)
+            .then(response => response.json())
+            .then(data => setUserInfo(data))
+    }, [id])
+
+
     return (
         <div className="user">
             <div>
-                <img src={ info.avatar_url } alt="" />
+                <img src={ userInfo.avatar_url } alt="" />
                 <div>
-                    <p>{ info.name }</p>
-                    <a href={ info.html_url } target="_blank">Check out { info.name }'s GitHub</a>
+                    <p>{ userInfo.name }</p>
+                    <a href={ userInfo.html_url } target="_blank">Check out { userInfo.name }'s GitHub</a>
                 </div>
             </div>
             <div>
                 <img src={infoImg} alt="" onClick={openingAndClosing} />
                 <div className='userExtraInfo' data-extrainfo-toggle={openExtraInfo}>
-                    <img src={info.avatar_url} alt="" />
-                    <p className='name'> { info.name } </p>
-                    <p className='bio'> { info.bio } </p>
+                    <img src={userInfo.avatar_url} alt="" />
+                    <p className='name'> { userInfo.name } </p>
+                    <p className='bio'> { userInfo.bio } </p>
                 </div>
             </div>
             <div className='bg'></div>

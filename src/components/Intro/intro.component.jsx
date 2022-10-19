@@ -25,6 +25,7 @@ const Intro = ({ projectName }) => {
         }, '-=.6')
     })
 
+
     return (
         <div className='intro'>
             <h1 className='raleway'>Welcome to { projectName } </h1>

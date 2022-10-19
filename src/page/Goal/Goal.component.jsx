@@ -10,8 +10,6 @@ import { useEffect, useState } from 'react'
 
 const Profile = () => {
 
-    const [userInfo, setUserInfo] = useState({}) 
-
     const Project = 'Asakatsu'
 
     const { id } = useParams()
@@ -20,17 +18,14 @@ const Profile = () => {
         return P.name == id;
     })
 
-    useEffect(() => {
-        fetch(`https://api.github.com/users/${findingProfile.githubUsername}`)
-            .then(response => response.json())
-            .then(data => setUserInfo(data))
-    }, [id])
+
+
 
     return (
         <div className='goal'>
             { findingProfile ? 
                 <div className='goalSection'>
-                    <User info={ userInfo } /> 
+                    <User info={ findingProfile.githubUsername } id={id} /> 
                     { findingProfile.goals ? 
                         <div>
                             <h1>Goal</h1>
