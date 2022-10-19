@@ -1,25 +1,17 @@
 .user {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: .5em;
 
-    div:nth-of-type(1) {
-        position: relative;
-
-        .skeleton {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
+    & > div:nth-of-type(1) {
+        display: flex;
+        align-items: center;
+        gap: .5em;
 
         img {
             width: 50px;
             border-radius: 50%;
         }
-    }
-
-    div {
 
         p {
             line-height: 1;
@@ -33,5 +25,77 @@
                 text-decoration: 1px underline var(--primary-color);
             }
         }
+    }
+
+    & > div:nth-of-type(2) {
+        position: relative;
+        z-index: 999;
+
+        img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .userExtraInfo {
+            position: absolute;
+            right: 0;
+            top: 100%;
+            width: 300px;
+            display: none;
+            flex-direction: column;
+            gap: .5em;
+            align-items: center;
+            text-align: center;
+            background-color: var(--background-color-2);
+            padding: 1em;
+            border-radius: 1em;
+            box-shadow: 0 5px 1px rgba(0, 0, 0, 0.408);
+            animation: userExtraInfo .6s;
+
+            @keyframes userExtraInfo {
+                from {
+                    opacity: 0;
+                    transform: translateY(40px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .name {
+                font-size: 18px;
+            }
+
+            .bio {
+                font-size: 14px;
+            }
+
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+
+            a {
+                margin-top: 1em;
+            }
+        }
+
+        .userExtraInfo[data-extrainfo-toggle='true'] {
+            display: flex;
+        }
+    }
+
+    .bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.511);
+        z-index: 99;
+        display: none;
     }
 }

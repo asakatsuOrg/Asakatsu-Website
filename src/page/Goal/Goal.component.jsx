@@ -5,6 +5,8 @@ import ProfileData from '../../../Profile.json'
 import Intro from '../../components/Intro/intro.component'
 import User from '../../components/user/user.component'
 import Goal from '../../components/each goal/eachgoal.component'
+import NoGoal from '../../components/No Goal/nogoal.component'
+import { useEffect, useState } from 'react'
 
 const Profile = () => {
 
@@ -16,17 +18,20 @@ const Profile = () => {
         return P.name == id;
     })
 
+
+
+
     return (
         <div className='goal'>
             { findingProfile ? 
-                <div>
-                    <User info={ findingProfile } /> 
+                <div className='goalSection'>
+                    <User info={ findingProfile.githubUsername } id={id} /> 
                     { findingProfile.goals ? 
                         <div>
                             <h1>Goal</h1>
                             <Goal goalInfo={findingProfile.goals} />
                         </div>
-                    : "" }
+                    : <NoGoal /> }
                 </div>
             : <Intro projectName={Project} /> }
             

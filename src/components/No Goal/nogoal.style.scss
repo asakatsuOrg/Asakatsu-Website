@@ -1,0 +1,84 @@
+.noGoal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+
+    h1 {
+        font-weight: bolder;
+    }
+
+    svg {
+        max-width: 400px;
+    }
+}
+
+
+// animation 
+.noGoal {
+
+    #checked1, #checked2, #checked3 {
+        animation: checked 2s infinite alternate;
+
+        @keyframes checked {
+            0% {
+                opacity: 0;
+            }
+            40% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+
+    #checked2 {
+        animation-duration: 2.2s;
+    }
+    #checked3 {
+        animation-duration: 1.5s;
+    }
+
+
+    #r11, #r12, #r13, #r14, #r21, #r22, #r23, #r31, #r32, #r33, #r34 {
+        transform-origin: center;
+        transform-box: fill-box;
+        animation: rectangle 5s infinite alternate;
+
+        @keyframes rectangle {
+            0% {
+                transform: scaleX(0);
+            }
+            70% {
+                transform: scaleX(1);
+            }
+            100% {
+                transform: scaleX(1);
+            }
+        }
+    }
+    #r12 {
+        animation-duration: 5.1s;
+    }
+    #r14 {
+        animation-duration: 5.2s;
+    }
+    #r13 {
+        animation-duration: 5.3s;
+    }
+    #r21 {
+        animation-duration: 5.3s;
+    }
+    #r23 {
+        animation-duration: 4s;
+    }
+    #r22 {
+        animation-duration: 4.8s;
+    }
+    #r32 {
+        animation-duration: 4.3s;
+    }
+}

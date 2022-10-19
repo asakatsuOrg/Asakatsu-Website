@@ -1,15 +1,13 @@
 [
     {
         "name": "Avie",
-        "profileImg": "https://github.com/avie-dev.png",
-        "github": "https://github.com/avie-dev"
+        "githubUsername": "avie-dev"
     },
     {
         "name": "Philips",
-        "profileImg": "https://github.com/Kellsonphilips.png",
-        "github": "https://github.com/Kellsonphilips",
+        "githubUsername": "Kellsonphilips",
         "goals": [
-           { 
+            { 
                 "goal": "30 days push-up task",
                 "step_to_achieve_it": ["At least 40 push-ups per rep.", "Endure the pain.", "At least 200 push a day at the completion date."],
                 "target_date": "10/19/2022",
@@ -31,33 +29,8 @@
     },
     {
         "name": "Ali Reza",
-        "profileImg": "https://github.com/AliReza1083.png",
-        "github": "https://github.com/AliReza1083",
+        "githubUsername": "AliReza1083",
         "goals": [
-            {
-                "goal": "Learn React",
-                "step_to_achieve_it": ["work hard", "do everything", "add more or delete this item"],
-                "target_date": "mm/dd/yyy",
-                "completed": false
-            },
-            {
-                "goal": "Learn React",
-                "step_to_achieve_it": ["work hard", "do everything", "add more or delete this item"],
-                "target_date": "mm/dd/yyy",
-                "completed": true
-            },
-            {
-                "goal": "Learn React",
-                "step_to_achieve_it": ["work hard", "do everything", "add more or delete this item"],
-                "target_date": "mm/dd/yyy",
-                "completed": false
-            },
-            {
-                "goal": "Learn React",
-                "step_to_achieve_it": ["work hard", "do everything", "add more or delete this item"],
-                "target_date": "mm/dd/yyy",
-                "completed": true
-            },
             {
                 "goal": "Learn React",
                 "step_to_achieve_it": ["work hard", "do everything", "add more or delete this item"],

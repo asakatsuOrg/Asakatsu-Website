@@ -11,16 +11,37 @@
         color: var(--primary-color);
         font-size: 5em;
         font-weight: 900;
+        opacity: 0;
+        transform: translateX(-80px);
     }
 
     p {
         padding: 1em 10em;
+        opacity: 0;
+        transform: translateX(-80px);
     }
 
     a {
-
+        opacity: 0;
+        transform: translateX(-80px);
+        
         .button {
             background-color: var(--primary-color);
+        }
+    }
+
+    @media (max-width: 1129px) {
+        h1 {
+            font-size: 48px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        h1 {
+            font-size: 32px;
+        }
+        p {
+            padding: 1em;
         }
     }
 
@@ -30,7 +51,7 @@
         }
         p {
             padding: 1em;
-            font-size: 14px;
+            font-size: 12px;
         }
     }
 }

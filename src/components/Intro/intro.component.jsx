@@ -1,8 +1,31 @@
 import './intro.style.scss'
 
 import Button from '@mui/material/Button';
+import { gsap } from 'gsap'
+import { useEffect } from 'react';
 
 const Intro = ({ projectName }) => {
+
+    useEffect(() => {
+        const tl = gsap.timeline()
+        tl.to('.intro h1', {
+            x: 0,
+            opacity: 1,
+            duration: 1
+        })
+        .to('.intro p', {
+            x: 0,
+            opacity: 1,
+            duration: 1
+        }, '-=.5')
+        .to('.intro a', {
+            x: 0,
+            opacity: 1,
+            duration: 1
+        }, '-=.6')
+    })
+
+
     return (
         <div className='intro'>
             <h1 className='raleway'>Welcome to { projectName } </h1>
