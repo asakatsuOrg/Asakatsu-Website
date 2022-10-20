@@ -78,8 +78,11 @@
                 border-radius: 50%;
             }
 
-            a {
+            .socialMedia {
                 margin-top: 1em;
+                display: flex;
+                gap: 1em;
+
             }
         }
 
