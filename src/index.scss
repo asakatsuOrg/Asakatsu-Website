@@ -22,6 +22,9 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .raleway {
         font-family: 'Raleway', sans-serif;
@@ -30,5 +33,13 @@ body {
     a {
         text-decoration: none;
         color: black;
+    }
+
+    .button {
+        background-color: var(--primary-color);
+
+        &:hover {
+            background-color: var(--secondary-color);
+        }
     }
 }

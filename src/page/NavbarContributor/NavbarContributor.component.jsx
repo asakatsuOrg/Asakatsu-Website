@@ -1,4 +1,4 @@
-import './Navbar.style.scss'
+import './NavbarContributor.style.scss'
 
 import { Fragment } from 'react'
 import { Outlet, Link } from 'react-router-dom'
@@ -6,7 +6,7 @@ import { useState } from 'react'
 
 import Contributors from '../../../Profile.json'
 
-const Navbar = () => {
+const NavbarContributor = () => {
 
     const [ navbarIcon, setNavbarIcon ] = useState('https://cdn-icons-png.flaticon.com/512/992/992482.png')
 
@@ -31,7 +31,7 @@ const Navbar = () => {
                 <h1>Contributors</h1>
                 <div>
                     { Contributors.map(C => {
-                        return <Link className='names' to={`/${C.name}`} > { C.name } </Link>
+                        return <Link className='names' to={`/contributor/${C.name}`} > { C.name } </Link>
                     }) }
                 </div>
             </nav>
@@ -44,4 +44,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default NavbarContributor

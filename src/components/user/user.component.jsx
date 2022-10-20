@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useEffect } from 'react';
 import Button from '@mui/material/Button';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 import './user.style.scss'
 
@@ -45,7 +47,10 @@ const User = ({ info, id }) => {
                     <img src={userInfo.avatar_url} alt="" />
                     <p className='name'> { userInfo.name } </p>
                     <p className='bio'> { userInfo.bio } </p>
-                    <a href={ userInfo.html_url } target="_blank"><Button className='button' variant="contained">GitHub</Button></a>
+                    <div className='socialMedia'>
+                        <a href={ userInfo.html_url } target="_blank"><GitHubIcon /></a>
+                        { userInfo.twitter_username ? <a href={`https://twitter.com/${userInfo.twitter_username}`} target="_blank"><TwitterIcon /></a> : "" }
+                    </div>
                 </div>
             </div>
             <div className='bg'></div>
