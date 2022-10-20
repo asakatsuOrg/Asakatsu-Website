@@ -3,7 +3,7 @@ import './role.style.scss'
 const Role = () => {
     return (
         <div className='role'>
-            <h1>Role</h1>
+            <h1>Rule</h1>
             <ul>
                 <li>Be concise and specific with your goals. Eg: Set Goal (Avie):[100 spaces in 100 days]</li>
                 <li>Make sure to create a PR for the issue you created.</li>
