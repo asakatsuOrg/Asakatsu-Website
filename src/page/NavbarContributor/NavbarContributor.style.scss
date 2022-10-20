@@ -3,6 +3,8 @@ nav {
     height: 100vh;
     background-color: var(--background-color-2);
     position: fixed;
+    top: 0;
+    left: 0;
     overflow: auto;
     z-index: 9999;
     transition: .3s;

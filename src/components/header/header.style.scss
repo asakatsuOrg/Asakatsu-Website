@@ -1,0 +1,61 @@
+header {
+    width: 100%;
+    padding: 1em;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+
+    @media (min-width: 1500px) {
+        max-width: 1500px;
+    }
+
+    .homeText {
+        
+        h1 {
+            font-size: 52px;
+            font-weight: bolder;
+        }
+
+        p {
+            margin-bottom: 1em;
+
+            a {
+                color: var(--primary-color);
+                font-weight: 500;
+                text-decoration: 1px underline var(--primary-color);
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 13px;
+            }
+
+            .button {
+                font-size: 12px;
+            }
+        }
+    }
+
+
+    @media (max-width: 768px) {
+        height: auto;
+        grid-template-columns: 1fr;
+        margin-top: 80px;
+    }
+}

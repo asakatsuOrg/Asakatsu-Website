@@ -1,0 +1,28 @@
+.role {
+    padding: 1em;
+
+    @media (min-width: 1500px) {
+        max-width: 1500px;
+    }
+
+    ul {
+        margin-left: 3em;
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+        margin-top: 1em;
+
+        a {
+            color: var(--primary-color);
+            font-weight: 500;
+            text-decoration: 1px underline var(--primary-color);
+        }
+
+        @media (max-width: 576px) {
+            font-size: 14px;
+            margin-left: 2em;
+        }
+    }
+
+    
+}
