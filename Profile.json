@@ -9,7 +9,7 @@
         "goals": [
             { 
                 "goal": "Daily Morning Fitness Routine Check",
-                "step_to_achieve_it": ["Crunches 30 in 5x reps.", "Endure the pain.", "Push-ups 30 in 5x reps.", "Dunbell 30 each hand in 5x reps"],
+                "step_to_achieve_it": ["Crunches 30 in 5x reps.", "Endure the pain.", "Push-ups 30 in 5x reps.", "Dunbell 20 each hand in 5x reps", "Neck exercise 12 in 5x reps"],
                 "target_date": "12/31/2022",
                 "completed": false
             },
@@ -21,7 +21,7 @@
             },
             { 
                 "goal": "Improving early wake-up routine",
-                "step_to_achieve_it": ["Sleep early.", "stop work early.", "Wind down early to relax brain."],
+                "step_to_achieve_it": ["Stop work early.", "Stay out of screen", "Wind down early to relax brain.", "Sleep early."],
                 "target_date": "12/31/2022",
                 "completed": false
             },
