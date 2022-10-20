@@ -11,7 +11,10 @@ If you want to join, add your name in Profile.json file.
 
 File location:
 `./Profile.json`
+![image](https://user-images.githubusercontent.com/99729607/196925487-df45f07f-50bd-4dd0-b021-305aceedec4e.png)
 
+
+### Use this structure to join:
 
 ![image](https://user-images.githubusercontent.com/99729607/196917580-27379a0d-f94d-476b-b2cb-ac4a4417d14a.png)
 
