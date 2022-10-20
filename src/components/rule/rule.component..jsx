@@ -1,8 +1,12 @@
-import './role.style.scss'
+import './rule.style.scss'
 
-const Role = () => {
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
+const Rule = () => {
     return (
-        <div className='role'>
+        <div className='rule' data-aos="fade-up">
             <h1>Rule</h1>
             <ul>
                 <li>Be concise and specific with your goals. Eg: Set Goal (Avie):[100 spaces in 100 days]</li>
@@ -13,4 +17,4 @@ const Role = () => {
     )
 }
 
-export default Role
+export default Rule

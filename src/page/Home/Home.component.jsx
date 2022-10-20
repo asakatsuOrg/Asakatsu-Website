@@ -1,7 +1,7 @@
 import './Home.style.scss'
 import Navbar from '../../components/HomeNavbar/Navbar.component'
 import Header from '../../components/header/header.component';
-import Role from '../../components/role/role.component.';
+import Rule from '../../components/rule/rule.component.';
 import Contributor from '../../components/contributor/contributor.component';
 import Background from '../../components/background/background.component';
 
@@ -13,7 +13,7 @@ const Home = () => {
         <div className='home'>
             <Navbar />
             <Header />
-            <Role />
+            <Rule />
             <Contributor />
             <Background />
         </div>

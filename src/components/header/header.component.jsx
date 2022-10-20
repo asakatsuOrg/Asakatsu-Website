@@ -3,8 +3,36 @@ import './header.style.scss'
 import Button from '@mui/material/Button';
 import { ReactComponent as HomeSVG } from '../../assets/Home SVG.svg'
 
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
 
 const Header = () => {
+
+    useEffect(() => {
+        const tl = gsap.timeline();
+        tl.to('.homeText h1', {
+            x: 0,
+            opacity: 1, 
+            duration: 1
+        })
+        .to('.homeText p', {
+            x: 0,
+            opacity: 1, 
+            stagger: .2,
+            duration: 1
+        }, '-=.5')
+        .to('.homeText .button', {
+            x: 0,
+            opacity: 1, 
+            duration: .6
+        }, '-=.5')
+        .to('.headerSVG', {
+            scale: 1,
+            opacity: 1, 
+            duration: .3
+        })
+    }, [])
+    
     return (
         <header>
             <div className='homeText'>
@@ -14,7 +42,7 @@ const Header = () => {
                 <p>In this project, everyone who will commit will have to do a thing or two every morning and log the progress here.</p>  
                 <a href='https://github.com/asakatsuOrg/AsaKatsuProject' target="_blank"><Button className='button' variant="contained">Make your Goal</Button></a>
             </div>
-            <HomeSVG />
+            <HomeSVG className="headerSVG" />
         </header>
     )
 }

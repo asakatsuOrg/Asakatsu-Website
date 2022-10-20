@@ -8,40 +8,40 @@
         "githubUsername": "Kellsonphilips",
         "goals": [
             { 
-                "goal": "30 days push-up task",
-                "step_to_achieve_it": ["At least 40 push-ups per rep.", "Endure the pain.", "At least 200 push a day at the completion date."],
-                "target_date": "10/19/2022",
-                "completed": true
-            },
-             { 
-                "goal": "30 days tweet post and engagement",
-                "step_to_achieve_it": ["At least a tweet a day.", "Join space regularly.", "Speak in spaces.", "Engage in others tweets."],
-                "target_date": "10/19/2022",
-                "completed": true
-            },
-             { 
-                "goal": "30 days early wake-up goal",
-                "step_to_achieve_it": ["Sleep early.", "stop work early.", "Out of screen 1 hr before bed time."],
-                "target_date": "10/19/2022",
-                "completed": true
-            },
-                { 
                 "goal": "Daily Morning Fitness Routine Check",
                 "step_to_achieve_it": ["Crunches 30 in 5x reps.", "Endure the pain.", "Push-ups 30 in 5x reps.", "Dunbell 30 each hand in 5x reps"],
                 "target_date": "12/31/2022",
                 "completed": false
             },
-             { 
+            { 
                 "goal": "Networking and staying consistent with Twitter engagement",
                 "step_to_achieve_it": ["At least a tweet a day.", "Join space regularly.", "Speak in spaces.", "Engage in others tweets."],
                 "target_date": "12/31/2022",
                 "completed": false
             },
-             { 
+            { 
                 "goal": "Improving early wake-up routine",
                 "step_to_achieve_it": ["Sleep early.", "stop work early.", "Wind down early to relax brain."],
                 "target_date": "12/31/2022",
                 "completed": false
+            },
+            { 
+                "goal": "30 days push-up task",
+                "step_to_achieve_it": ["At least 40 push-ups per rep.", "Endure the pain.", "At least 200 push a day at the completion date."],
+                "target_date": "10/19/2022",
+                "completed": true
+            },
+            { 
+                "goal": "30 days tweet post and engagement",
+                "step_to_achieve_it": ["At least a tweet a day.", "Join space regularly.", "Speak in spaces.", "Engage in others tweets."],
+                "target_date": "10/19/2022",
+                "completed": true
+            },
+            { 
+                "goal": "30 days early wake-up goal",
+                "step_to_achieve_it": ["Sleep early.", "stop work early.", "Out of screen 1 hr before bed time."],
+                "target_date": "10/19/2022",
+                "completed": true
             }
         ]
     },

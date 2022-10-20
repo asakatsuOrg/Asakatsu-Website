@@ -1,5 +1,9 @@
 import './contributor.style.scss'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
 const Contributor = () => {
     return (
         <div className="contributor">
