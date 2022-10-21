@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
 import './Goal.style.scss'
+import Logo from '../../assets/Logo.png'
 
 import ProfileData from '../../../Profile.json'
 import Intro from '../../components/Intro/intro.component'
@@ -7,6 +8,7 @@ import User from '../../components/user/user.component'
 import Goal from '../../components/each goal/eachgoal.component'
 import NoGoal from '../../components/No Goal/nogoal.component'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Profile = () => {
 
@@ -34,7 +36,8 @@ const Profile = () => {
                     : <NoGoal /> }
                 </div>
             : <Intro projectName={Project} /> }
-            
+            <Link to="/" className='logo'><img width="100%" src={Logo} alt="" /></Link>
+            <div className='bg2'></div>
         </div>
     )
 }

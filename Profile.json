@@ -1,15 +1,17 @@
 [
     {
+        "contributor": 1,
         "name": "Avie",
         "githubUsername": "avie-dev"
     },
     {
+        "contributor": 2,
         "name": "Philips",
         "githubUsername": "Kellsonphilips",
         "goals": [
             { 
                 "goal": "Daily Morning Fitness Routine Check",
-                "step_to_achieve_it": ["Crunches 30 in 5x reps.", "Endure the pain.", "Push-ups 30 in 5x reps.", "Dunbell 30 each hand in 5x reps"],
+                "step_to_achieve_it": ["Crunches 30 in 5x reps.", "Endure the pain.", "Push-ups 30 in 5x reps.", "Dunbell 20 each hand in 5x reps", "Neck exercise 12 in 5x reps"],
                 "target_date": "12/31/2022",
                 "completed": false
             },
@@ -21,7 +23,7 @@
             },
             { 
                 "goal": "Improving early wake-up routine",
-                "step_to_achieve_it": ["Sleep early.", "stop work early.", "Wind down early to relax brain."],
+                "step_to_achieve_it": ["Stop work early.", "Stay out of screen", "Wind down early to relax brain.", "Sleep early."],
                 "target_date": "12/31/2022",
                 "completed": false
             },
@@ -46,7 +48,90 @@
         ]
     },
     {
+        "contributor": 3,
+        "name": "Subho",
+        "githubUsername": "subhoghoshX"
+    },
+    {
+        "contributor": 4,
+        "name": "Wataru",
+        "githubUsername": "watacodes"
+    },
+    {
+        "contributor": 5,
+        "name": "Shubhangi",
+        "githubUsername": "codewithshubhi"
+    },
+    {
+        "contributor": 6,
+        "name": "Elucian",
+        "githubUsername": "elucian"
+    },
+    {
+        "contributor": 7,
+        "name": "Arya",
+        "githubUsername": "AryaCodesAI"
+    },
+    {
+        "contributor": 8,
+        "name": "Adwait",
+        "githubUsername": "epicadidash"
+    },
+    {
+        "contributor": 9,
+        "name": "Jax",
+        "githubUsername": "44jax44"
+    },
+    {
+        "contributor": 10,
+        "name": "Niveytha",
+        "githubUsername": "Niveytha"
+    },
+    {
+        "contributor": 11,
+        "name": "Aryan",
+        "githubUsername": "AryanBabber"
+    },
+    {
+        "contributor": 12,
+        "name": "Chaaals",
+        "githubUsername": "chaaals"
+    },
+    {
+        "contributor": 13,
+        "name": "Divv",
+        "githubUsername": "DivvSaxena"
+    },
+    {
+        "contributor": 14,
+        "name": "Yogesh",
+        "githubUsername": "YogeshRaj27"
+    },
+    {
+        "contributor": 15,
+        "name": "Ayush",
+        "githubUsername": "ayushwritescode"
+    },
+    {
+        "contributor": 16,
+        "name": "Nate",
+        "githubUsername": "nateemerson"
+    },
+    {
+        "contributor": 17,
+        "name": "YK",
+        "githubUsername": "ykdojo"
+    },
+    {
+        "contributor": 18,
         "name": "Ali Reza",
-        "githubUsername": "AliReza1083"
+        "githubUsername": "AliReza1083",
+        "goals": [
+            {
+                "goal": "Learn React",
+                "step_to_achieve_it": ["Make projects", "Do what Teacher says", "Do open-source"],
+                "target_date": "01/16/2023"
+            }
+        ]
     }
 ]
