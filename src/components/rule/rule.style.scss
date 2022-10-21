@@ -1,5 +1,5 @@
 .rule {
-    padding: 1em;
+    padding: 1em 1em 6em;
 
     @media (min-width: 1500px) {
         max-width: 1500px;
@@ -23,6 +23,8 @@
             margin-left: 2em;
         }
     }
-
+    @media (max-width: 768px) {
+        padding-bottom: 3em;
+    }
     
 }

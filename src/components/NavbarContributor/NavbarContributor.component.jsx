@@ -6,7 +6,7 @@ import { useState } from 'react'
 
 import Contributors from '../../../Profile.json'
 
-const NavbarContributor = () => {
+const NavbarContributor = ({ Hover, NotHover }) => {
 
     const [ navbarIcon, setNavbarIcon ] = useState('https://cdn-icons-png.flaticon.com/512/992/992482.png')
 
@@ -25,9 +25,10 @@ const NavbarContributor = () => {
         }
     }
 
+
     return (
         <Fragment>
-            <nav data-toggle="false">
+            <nav data-toggle="false" onMouseEnter={Hover} onMouseLeave={NotHover} >
                 <h1>Contributors</h1>
                 <div>
                     { Contributors.map(C => {

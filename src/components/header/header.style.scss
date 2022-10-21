@@ -1,7 +1,6 @@
 header {
     width: 100%;
-    padding: 1em;
-    height: 100vh;
+    padding: 5em 1em 0em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -71,5 +70,6 @@ header {
         height: auto;
         grid-template-columns: 1fr;
         margin-top: 80px;
+        padding: 1em;
     }
 }
