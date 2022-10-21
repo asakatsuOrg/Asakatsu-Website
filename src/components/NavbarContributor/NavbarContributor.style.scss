@@ -21,18 +21,47 @@ nav {
         padding: 1em 1em 0;
     }
 
-    div {
+    & > div {
         display: flex;
         flex-direction: column;
         padding: 1em;
         gap: .4em;
 
-        .names {
-            padding: .1em .4em;
-            border-radius: .3em;
+        div {
 
-            &:hover {
-                background-color: #dadada;
+            .names {
+                position: relative;
+                display: flex;
+                align-items: center;
+                gap: .6em;
+                width: 100%;
+                padding: .1em .4em;
+                border-radius: .3em;
+
+                img {
+                    width: 20px;
+                    border-radius: 50%;
+                }
+
+                span {
+                    opacity: 0;
+                    position: absolute;
+                    top: 50%;
+                    right: .5em;
+                    transform: translateY(-80%);
+                    font-size: 14px;
+                    transition: .2s;
+                }
+    
+                &:hover {
+                    background-color: #dadada;
+
+                    span {
+                        opacity: 1;
+                        transform: translateY(-50%);
+                    }
+                }
+
             }
         }
     }

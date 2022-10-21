@@ -32,7 +32,15 @@ const NavbarContributor = ({ Hover, NotHover }) => {
                 <h1>Contributors</h1>
                 <div>
                     { Contributors.map(C => {
-                        return <Link className='names' to={`/contributor/${C.name}`} > { C.name } </Link>
+                        return (
+                            <div>
+                                <Link className='names' to={`/contributor/${C.name}`} > 
+                                    <img src={`https://github.com/${C.githubUsername}.png`} alt="" />
+                                    { C.name } 
+                                    <span> { C.contributor } </span>
+                                </Link>
+                            </div>
+                        )
                     }) }
                 </div>
             </nav>
