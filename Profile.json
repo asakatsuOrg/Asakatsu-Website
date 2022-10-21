@@ -1,11 +1,73 @@
 [
     {
         "contributor": 1,
+        "name": "Adwait",
+        "githubUsername": "epicadidash"
+    },
+    {
+        "contributor": 2,
+        "name": "Ali Reza",
+        "githubUsername": "AliReza1083",
+        "goals": [
+            {
+                "goal": "Learn React",
+                "step_to_achieve_it": ["Make projects", "Do what Teacher says", "Do open-source"],
+                "target_date": "01/16/2023"
+            }
+        ]
+    },
+    {
+        "contributor": 3,
+        "name": "Aryan",
+        "githubUsername": "AryanBabber"
+    },
+    {
+        "contributor": 4,
+        "name": "Arya",
+        "githubUsername": "AryaCodesAI"
+    },
+    {
+        "contributor": 5,
         "name": "Avie",
         "githubUsername": "avie-dev"
     },
     {
-        "contributor": 2,
+        "contributor": 6,
+        "name": "Ayush",
+        "githubUsername": "ayushwritescode"
+    },
+    {
+        "contributor": 7,
+        "name": "Chaaals",
+        "githubUsername": "chaaals"
+    },
+    {
+        "contributor": 8,
+        "name": "Divv",
+        "githubUsername": "DivvSaxena"
+    },
+    {
+        "contributor": 9,
+        "name": "Elucian",
+        "githubUsername": "elucian"
+    },
+    {
+        "contributor": 10,
+        "name": "Jax",
+        "githubUsername": "44jax44"
+    },
+    {
+        "contributor": 11,
+        "name": "Nate",
+        "githubUsername": "nateemerson"
+    },
+    {
+        "contributor": 12,
+        "name": "Niveytha",
+        "githubUsername": "Niveytha"
+    },
+    {
+        "contributor": 13,
         "name": "Philips",
         "githubUsername": "Kellsonphilips",
         "goals": [
@@ -48,74 +110,19 @@
         ]
     },
     {
-        "contributor": 3,
-        "name": "Subho",
-        "githubUsername": "subhoghoshX"
-    },
-    {
-        "contributor": 4,
-        "name": "Wataru",
-        "githubUsername": "watacodes"
-    },
-    {
-        "contributor": 5,
-        "name": "Shubhangi",
-        "githubUsername": "codewithshubhi"
-    },
-    {
-        "contributor": 6,
-        "name": "Elucian",
-        "githubUsername": "elucian"
-    },
-    {
-        "contributor": 7,
-        "name": "Arya",
-        "githubUsername": "AryaCodesAI"
-    },
-    {
-        "contributor": 8,
-        "name": "Adwait",
-        "githubUsername": "epicadidash"
-    },
-    {
-        "contributor": 9,
-        "name": "Jax",
-        "githubUsername": "44jax44"
-    },
-    {
-        "contributor": 10,
+        "contributor": 14,
         "name": "Niveytha",
         "githubUsername": "Niveytha"
     },
     {
-        "contributor": 11,
-        "name": "Aryan",
-        "githubUsername": "AryanBabber"
-    },
-    {
-        "contributor": 12,
-        "name": "Chaaals",
-        "githubUsername": "chaaals"
-    },
-    {
-        "contributor": 13,
-        "name": "Divv",
-        "githubUsername": "DivvSaxena"
-    },
-    {
-        "contributor": 14,
-        "name": "Yogesh",
-        "githubUsername": "YogeshRaj27"
-    },
-    {
         "contributor": 15,
-        "name": "Ayush",
-        "githubUsername": "ayushwritescode"
+        "name": "Subho",
+        "githubUsername": "subhoghoshX"
     },
     {
         "contributor": 16,
-        "name": "Nate",
-        "githubUsername": "nateemerson"
+        "name": "Wataru",
+        "githubUsername": "watacodes"
     },
     {
         "contributor": 17,
@@ -124,14 +131,7 @@
     },
     {
         "contributor": 18,
-        "name": "Ali Reza",
-        "githubUsername": "AliReza1083",
-        "goals": [
-            {
-                "goal": "Learn React",
-                "step_to_achieve_it": ["Make projects", "Do what Teacher says", "Do open-source"],
-                "target_date": "01/16/2023"
-            }
-        ]
-    }
+        "name": "Yogesh",
+        "githubUsername": "YogeshRaj27"
+    } 
 ]
