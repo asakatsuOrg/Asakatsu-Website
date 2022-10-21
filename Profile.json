@@ -47,6 +47,13 @@
     },
     {
         "name": "Ali Reza",
-        "githubUsername": "AliReza1083"
+        "githubUsername": "AliReza1083",
+        "goals": [
+            {
+                "goal": "Learn React",
+                "step_to_achieve_it": ["Make projects", "Do what Teacher says", "Do open-source"],
+                "target_date": "01/16/2023"
+            }
+        ]
     }
 ]
