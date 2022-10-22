@@ -6,7 +6,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 
 import './user.style.scss'
 
-const User = ({ info, id }) => {
+const User = ({ info, id, goalQuantity }) => {
 
     const [userInfo, setUserInfo] = useState({}) 
     const [infoImg, setInfoImg] = useState('https://cdn-icons-png.flaticon.com/512/665/665049.png');
@@ -31,6 +31,11 @@ const User = ({ info, id }) => {
             .then(data => setUserInfo(data))
     }, [id])
 
+    const GoalQuantity = () => {
+        if (goalQuantity.goals) {
+            return goalQuantity.goals.length;
+        }
+    }
 
     return (
         <div className="user">

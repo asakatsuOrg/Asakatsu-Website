@@ -20,18 +20,23 @@ const Profile = () => {
         return P.name == id;
     })
 
-
+    // const GoalQuantity = () => {
+    //     if (findingProfile.goals) {
+    //         return findingProfile.goals.length;
+    //     }
+    // }
 
 
     return (
         <div className='goal'>
             { findingProfile ? 
                 <div className='goalSection'>
-                    <User info={ findingProfile.githubUsername } id={id} /> 
+                    <User info={ findingProfile.githubUsername } goalQuantity={findingProfile} id={id} /> 
                     { findingProfile.goals ? 
                         <div>
                             <h1>Goal</h1>
                             <Goal goalInfo={findingProfile.goals} />
+                            {/* <GoalQuantity /> */}
                         </div>
                     : <NoGoal /> }
                 </div>

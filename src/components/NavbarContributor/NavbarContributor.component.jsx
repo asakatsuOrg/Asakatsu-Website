@@ -37,7 +37,7 @@ const NavbarContributor = ({ Hover, NotHover }) => {
                                 <Link className='names' to={`/contributor/${C.name}`} > 
                                     <img src={`https://github.com/${C.githubUsername}.png`} alt="" />
                                     { C.name } 
-                                    <span> { C.contributor } </span>
+                                    <span className='contributorNum'> { C.contributor } </span>
                                 </Link>
                             </div>
                         )
