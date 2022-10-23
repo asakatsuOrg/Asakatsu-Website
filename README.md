@@ -42,9 +42,9 @@ Before installation, please make sure you have already installed the following t
 
 ## 👌 What you have to do to contribute
 
-- [Read the rules]()
-- [Follow the installation Steps]()
-- [Follow the contributing Steps]()
+- [Read the rules](https://github.com/asakatsuOrg/Asakatsu-Website/blob/main/CONTRIBUTING.md#rules)
+- [Follow the installation Steps](https://github.com/asakatsuOrg/Asakatsu-Website/blob/main/README.md#-prerequisites)
+- [Follow the contributing Steps](https://github.com/asakatsuOrg/Asakatsu-Website/blob/main/README.md#submit-your-changes-for-review)
 
 If you're not comfortable with command line, [here are tutorials using GUI tools.](#tutorials-using-other-tools)_
 
@@ -66,7 +66,7 @@ Now clone the forked repository to your machine. Go to your GitHub account, open
 
 Open a terminal and run the following git command:
 
-```
+```bash
 git clone "url you just copied"
 ```
 
@@ -76,7 +76,7 @@ where "url you just copied" (without the quotation marks) is the url to this rep
 
 For example:
 
-```
+```bash
 git clone https://github.com/asakatsuOrg/Asakatsu-Website.git
 ```
 
@@ -86,19 +86,19 @@ where `this-is-you` is your GitHub username. Here you're copying the contents of
 
 Change to the repository directory on your computer (if you are not already there):
 
-```
+```bash
 cd Asakatsu-Website
 ```
 
 Now create a branch using the `git switch` command:
 
-```
+```bash
 git switch -c your-new-branch-name
 ```
 
 For example:
 
-```
+```bash
 git switch -c my-branch
 ```
 
@@ -120,13 +120,13 @@ If you go to the project directory and execute the command `git status`, you'll 
 
 Add those changes to the branch you just created using the `git add` command:
 
-```
+```bash
 git add Contributors.md
 ```
 
 Now commit those changes using the `git commit` command:
 
-```
+```bash
 git commit -m "Add your-name to Contributors list"
 ```
 
@@ -136,7 +136,7 @@ replacing `your-name` with your name.
 
 Push your changes using the command `git push`:
 
-```
+```bash
 git push origin -u my-branch
 ```
 
