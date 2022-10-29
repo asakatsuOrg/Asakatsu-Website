@@ -7,14 +7,15 @@ import Background from '../../components/background/background.component';
 
 
 import { Link } from 'react-router-dom'
+import { motion as m } from 'framer-motion'
 
 const Home = () => {
     return (
-        <div className='home'>
+        <m.div className='home' exit={{opacity: 0}}>
             <Navbar />
             <Header />
             <Rule />
-        </div>
+        </m.div>
     )
 }
 

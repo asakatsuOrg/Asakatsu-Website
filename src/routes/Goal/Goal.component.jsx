@@ -9,6 +9,7 @@ import Goal from '../../components/each goal/eachgoal.component'
 import NoGoal from '../../components/No Goal/nogoal.component'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { motion as m } from 'framer-motion'
 
 const Profile = () => {
 
@@ -28,7 +29,7 @@ const Profile = () => {
 
 
     return (
-        <div className='goal'>
+        <m.div className='goal' exit={{opacity: 0}}>
             { findingProfile ? 
                 <div className='goalSection'>
                     <User info={ findingProfile.githubUsername } goalQuantity={findingProfile} id={id} /> 
@@ -43,7 +44,7 @@ const Profile = () => {
             : <Intro projectName={Project} /> }
             <Link to="/" className='logo'><img width="100%" src={Logo} alt="" /></Link>
             <div className='bg2'></div>
-        </div>
+        </m.div>
     )
 }
 
