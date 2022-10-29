@@ -14,8 +14,6 @@ const Home = () => {
             <Navbar />
             <Header />
             <Rule />
-            <Contributor />
-            <Background />
         </div>
     )
 }
