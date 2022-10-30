@@ -83,6 +83,14 @@
         background-color: rgba(0, 128, 0, 0.414);
     }
 
+    @media (min-width: 1700px) {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    @media (min-width: 1600px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
     @media (max-width: 1129px) {
         grid-template-columns: repeat(2, 1fr);
     }
