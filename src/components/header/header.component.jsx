@@ -38,9 +38,9 @@ const Header = () => {
             <div className='homeText'>
                 <h1>Asakatsu</h1>
                 <p>A project where you can keep track of your goal's progress, and contribute to open source in the same time.</p>
-                <p><a href="https://github.com/asakatsuOrg/AsaKatsuProject" target="_blank">AsaKatsu</a> is a Japanese term for waking up a little early to do something productive, in line with a goal. For example; read 4 books per month, do 100 days challenge, etc.</p>
+                <p><a href="https://github.com/asakatsuOrg/Asakatsu-Website" target="_blank">AsaKatsu</a> is a Japanese term for waking up a little early to do something productive, in line with a goal. For example; read 4 books per month, do 100 days challenge, etc.</p>
                 <p>In this project, everyone who will commit will have to do a thing or two every morning and log the progress here.</p>  
-                <a href='https://github.com/asakatsuOrg/AsaKatsuProject' target="_blank"><Button className='button' variant="contained">Make your Goal</Button></a>
+                <a href='https://github.com/asakatsuOrg/Asakatsu-Website' target="_blank"><Button className='button' variant="contained">Make your Goal</Button></a>
             </div>
             <HomeSVG className="headerSVG" />
         </header>
