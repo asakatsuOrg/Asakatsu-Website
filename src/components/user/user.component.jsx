@@ -9,7 +9,7 @@ import './user.style.scss'
 const User = ({ info, id, goalQuantity }) => {
 
     const [userInfo, setUserInfo] = useState({}) 
-    const [infoImg, setInfoImg] = useState('https://cdn-icons-png.flaticon.com/512/665/665049.png');
+    const [infoImg, setInfoImg] = useState('https://cdn-icons-png.flaticon.com/512/277/277964.png');
     const [openExtraInfo, setOpenExtraInfo] = useState('false')
 
     const openingAndClosing = () => {
@@ -20,7 +20,7 @@ const User = ({ info, id, goalQuantity }) => {
             darkBackground.style.display = 'block';
         } else {
             setOpenExtraInfo('false')
-            setInfoImg('https://cdn-icons-png.flaticon.com/512/665/665049.png')
+            setInfoImg('https://cdn-icons-png.flaticon.com/512/277/277964.png')
             darkBackground.style.display = 'none';
         }
     }

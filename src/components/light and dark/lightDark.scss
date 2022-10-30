@@ -1,0 +1,44 @@
+.dark {
+    --background-color: #212121;
+    --background-color-2: #292929;
+    --text-color: white;
+
+    nav {
+
+        .names:hover {
+            background-color: #353535;
+        }
+    }
+
+    header {
+
+        .headerSVG {
+
+            #circle-1, #circle-2, #circle-3 {
+                fill: rgb(45, 45, 45);
+            }
+
+            #item-1, #item-2, #item-3 {
+                fill: rgb(38, 38, 38);
+                stroke: rgb(97, 97, 97);
+            }
+        }
+    }
+
+    .eachGoal {
+
+        .completed {
+            background-color: rgb(5, 39, 1);
+        }
+    }
+
+    .user {
+
+        .socialMedia {
+
+            a {
+                color: white;
+            }
+        }
+    }
+}

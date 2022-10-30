@@ -8,6 +8,7 @@ nav {
     overflow: auto;
     z-index: 888;
     transition: .3s;
+    color: var(--text-color);
 
     &::-webkit-scrollbar {
         width: 5px;
@@ -37,6 +38,7 @@ nav {
                 width: 100%;
                 padding: .1em .4em;
                 border-radius: .3em;
+                color: var(--text-color);
 
                 img {
                     width: 20px;

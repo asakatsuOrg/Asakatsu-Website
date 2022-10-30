@@ -9,10 +9,10 @@ import Background from '../../components/background/background.component';
 import { Link } from 'react-router-dom'
 import { motion as m } from 'framer-motion'
 
-const Home = () => {
+const Home = ({ colorToggling, darkMode }) => {
     return (
         <m.div className='home' exit={{opacity: 0}}>
-            <Navbar />
+            <Navbar colorChanging={colorToggling} defaultTheme={darkMode}  />
             <Header />
             <Rule />
         </m.div>
