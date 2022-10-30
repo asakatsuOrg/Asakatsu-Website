@@ -1,7 +1,12 @@
 .achieve {
     margin-left: 2em;
+    margin-top: 16px;
 
     @media (max-width: 768px) {
         font-size: 14px;
     }
+}
+
+.notCompleted {
+    display: none;
 }

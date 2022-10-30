@@ -30,40 +30,46 @@ nav {
 
         div {
 
-            .names {
-                position: relative;
-                display: flex;
-                align-items: center;
-                gap: .6em;
+            .button2 {
+                padding: 0;
                 width: 100%;
-                padding: .1em .4em;
-                border-radius: .3em;
-                color: var(--text-color);
+                text-transform: capitalize;
 
-                img {
-                    width: 20px;
-                    border-radius: 50%;
-                }
-
-                .contributorNum {
-                    opacity: 0;
-                    position: absolute;
-                    top: 50%;
-                    right: .5em;
-                    transform: translateY(-80%);
-                    font-size: 14px;
-                    transition: .2s;
-                }
+                .names {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    gap: .6em;
+                    width: 100%;
+                    padding: .1em .4em;
+                    border-radius: .3em;
+                    color: var(--text-color);
     
-                &:hover {
-                    background-color: #dadada;
-
-                    span {
-                        opacity: 1;
-                        transform: translateY(-50%);
+                    img {
+                        width: 20px;
+                        border-radius: 50%;
                     }
+    
+                    .contributorNum {
+                        opacity: 0;
+                        position: absolute;
+                        top: 50%;
+                        right: .5em;
+                        transform: translateY(-80%);
+                        font-size: 14px;
+                        transition: .2s;
+                    }
+        
+                    &:hover {
+                        background-color: #dadada;
+    
+                        span {
+                            opacity: 1;
+                            transform: translateY(-50%);
+                        }
+                    }
+    
                 }
-
             }
         }
     }

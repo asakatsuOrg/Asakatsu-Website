@@ -1,10 +1,18 @@
 import './stepAchieve.style.scss'
 
-const Achieve = ({ stepsForAchieving }) => {
+const Achieve = ({ stepsForAchieving, completed }) => {
+
+    const Achieving = () => {
+        stepsForAchieving.map(step => {
+            return (
+                <li>{ step }</li>
+            )
+        }) 
+    }
 
     return (
-        <ul className='achieve'>
-            { stepsForAchieving.map(step => {
+        <ul className={`achieve ${completed == true ? 'notCompleted' : '' }`}>
+            {stepsForAchieving.map(step => {
                 return (
                     <li>{ step }</li>
                 )

@@ -5,8 +5,11 @@
 
     nav {
 
-        .names:hover {
-            background-color: #353535;
+        .button2 {
+
+            .names:hover {
+                background-color: #353535;
+            }
         }
     }
 
@@ -28,7 +31,8 @@
     .eachGoal {
 
         .completed {
-            background-color: rgb(5, 39, 1);
+            background-color: rgb(9, 90, 0);
+            box-shadow: 0 0 10px rgba(0, 128, 0, 0.388);
         }
     }
 

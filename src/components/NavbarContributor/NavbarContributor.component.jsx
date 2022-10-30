@@ -3,6 +3,7 @@ import './NavbarContributor.style.scss'
 import { Fragment } from 'react'
 import { Outlet, Link } from 'react-router-dom'
 import { useState } from 'react'
+import Button from '@mui/material/Button';
 
 import Contributors from '../../../Profile.json'
 
@@ -34,11 +35,13 @@ const NavbarContributor = ({ Hover, NotHover }) => {
                     { Contributors.map(C => {
                         return (
                             <div>
-                                <Link className='names' to={`/contributor/${C.name}`} > 
-                                    <img src={`https://github.com/${C.githubUsername}.png`} alt="" />
-                                    { C.name } 
-                                    <span className='contributorNum'> { C.contributor } </span>
-                                </Link>
+                                <Button className='button2'>
+                                    <Link className='names' to={`/contributor/${C.name}`} > 
+                                        <img src={`https://github.com/${C.githubUsername}.png`} alt="" />
+                                        { C.name } 
+                                        <span className='contributorNum'> { C.contributor } </span>
+                                    </Link>
+                                </Button>
                             </div>
                         )
                     }) }
