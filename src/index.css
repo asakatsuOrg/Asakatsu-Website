@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-background text-white;
+  @apply bg-background text-white dark:bg-white dark:text-black;
   font-family: "Roboto", sans-serif;
 }
 
@@ -41,4 +41,59 @@ h1 {
   transform: scale(1.3);
   animation: none;
   border-color: #005c99;
+}
+
+.toggler-wrapper {
+  display: block;
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.toggler-wrapper input[type="checkbox"] {
+  display: none;
+}
+
+.toggler-wrapper input[type="checkbox"]:checked + .toggler-slider {
+  background-color: #44cc66;
+}
+
+.toggler-wrapper .toggler-slider {
+  background-color: #ccc;
+  position: absolute;
+  border-radius: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.toggler-wrapper .toggler-knob {
+  position: absolute;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.toggler-wrapper.style-12
+  input[type="checkbox"]:checked
+  + .toggler-slider
+  .toggler-knob {
+  left: calc(100% - 14px - 3px);
+  background-image: url(../img/lock-fill.svg);
+}
+
+.toggler-wrapper.style-12 .toggler-knob {
+  width: calc(20px - 6px);
+  height: calc(20px - 6px);
+  border-radius: 50%;
+  left: 3px;
+  top: 3px;
+  background-color: #fff;
+  background-image: url(../img/lock-unlock-fill.svg);
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: center;
 }

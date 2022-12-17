@@ -6,7 +6,7 @@ const EachFAQ = ({ faq }) => {
 
   return (
     <div
-      className="group max-w-[876px] mb-4 bg-[#2F2F2F] rounded-lg px-4 md:px-12 py-5 cursor-pointer"
+      className="group max-w-[876px] mb-4 bg-[#2F2F2F] dark:bg-[#f2f2f2] rounded-lg px-4 md:px-12 py-5 cursor-pointer"
       onClick={() => setIsOpen(!isOpen)}>
       <div className="text-xl md:text-2xl flex justify-between items-center w-full">
         <h2>{faq.question}</h2>
