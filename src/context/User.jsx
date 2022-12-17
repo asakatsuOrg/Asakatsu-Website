@@ -14,8 +14,6 @@ export const UserProvider = ({ children }) => {
     });
   }, []);
 
-  console.log(currentUser);
-
   const value = { currentUser };
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };

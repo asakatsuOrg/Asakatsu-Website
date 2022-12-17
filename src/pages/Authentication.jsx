@@ -1,12 +1,13 @@
 import { signInWithGoogle } from "../utils/Authentication";
+import { storingUserData } from "../utils/Firestore";
 
 import { FcGoogle } from "react-icons/fc";
 import Button from "../components/Button";
 
 const Authentication = () => {
   const SignIn = async () => {
-    const response = await signInWithGoogle();
-    console.log(response);
+    const { user } = await signInWithGoogle();
+    storingUserData(user);
   };
 
   return (

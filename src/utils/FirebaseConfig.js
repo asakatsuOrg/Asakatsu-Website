@@ -1,3 +1,5 @@
+// https://console.firebase.google.com/u/1/project/asakatsu-c5ce8/overview
+
 export const firebaseConfig = {
   apiKey: "AIzaSyBIci2ikgOjEzpMMBoGVfQmoCLrPIOn8Ig",
   authDomain: "asakatsu-c5ce8.firebaseapp.com",
