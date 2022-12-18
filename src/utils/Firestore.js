@@ -3,7 +3,7 @@ import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 
 import { firebaseConfig } from "./FirebaseConfig";
 
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
 export const db = getFirestore();
 
@@ -21,10 +21,10 @@ export const storingUserData = async (userAuth) => {
       email: email,
       createdAt: createdAt,
       private: false,
-      twitter: null,
-      github: null,
-      youtube: null,
-      linkedin: null,
+      twitter: "",
+      github: "",
+      youtube: "",
+      linkedin: "",
     });
   }
 };
