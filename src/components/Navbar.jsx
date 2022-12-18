@@ -3,12 +3,17 @@ import { useContext } from "react";
 
 import { UserContext } from "../context/User";
 import { ThemeContext } from "../context/Theme";
+import { DropdownContext } from "../context/Dropdown";
+
 import Button from "./Button";
+import Dropdown from "./Dropdown";
 
 const Navbar = () => {
   const Navigate = useNavigate();
   const { currentUser } = useContext(UserContext);
   const { darkMode } = useContext(ThemeContext);
+  const { isOpen, setIsOpen } = useContext(DropdownContext);
+
   const goToHomePage = () => Navigate("/");
 
   if (darkMode == true) {
@@ -35,9 +40,14 @@ const Navbar = () => {
             Sign In
           </Button>
         ) : (
-          <div id="userImage" className="relative">
+          <div
+            id="userImage"
+            className="relative"
+            onClick={() => setIsOpen(!isOpen)}>
             <img
-              className="w-[38px] rounded-full"
+              className={`w-[38px] rounded-full duration-200 ${
+                isOpen == true ? "scale-90" : "scale-100"
+              }`}
               src={currentUser.photoURL}
               referrerPolicy="no-referrer"
               alt=""
@@ -45,6 +55,7 @@ const Navbar = () => {
           </div>
         )}
       </ul>
+      {currentUser && isOpen && <Dropdown path={currentUser.displayName} />}
     </div>
   );
 };

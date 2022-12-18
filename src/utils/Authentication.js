@@ -4,11 +4,12 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   onAuthStateChanged,
+  signOut,
 } from "firebase/auth";
 
 import { firebaseConfig } from "./FirebaseConfig";
 
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
 export const auth = getAuth();
 
@@ -22,3 +23,5 @@ export const signInWithGoogle = () => signInWithPopup(auth, googleProvider);
 export const isSignedIn = (callback) => {
   return onAuthStateChanged(auth, callback);
 };
+
+export const signingOut = () => signOut(auth);
