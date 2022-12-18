@@ -27,7 +27,7 @@ const Dashboard = () => {
           {usersData.map((userData) => {
             return (
               <EachUserDashboard
-                key={userData.displayName}
+                key={userData.uid}
                 userData={userData}
                 currentUser={currentUser}
               />

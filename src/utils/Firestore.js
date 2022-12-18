@@ -9,7 +9,7 @@ export const db = getFirestore();
 
 export const storingUserData = async (userAuth) => {
   const docRef = doc(db, "users", userAuth.uid);
-  const { displayName, photoURL, email } = userAuth;
+  const { displayName, photoURL, email, uid } = userAuth;
   const createdAt = new Date();
 
   const snapshot = await getDoc(docRef);
@@ -20,6 +20,7 @@ export const storingUserData = async (userAuth) => {
       photoURL: photoURL,
       email: email,
       createdAt: createdAt,
+      uid: uid,
       private: false,
       twitter: "",
       github: "",
