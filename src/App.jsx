@@ -8,6 +8,7 @@ import Authentication from "./pages/Authentication";
 import FAQ from "./pages/FAQ";
 import AddingGoals from "./pages/AddingGoals";
 import Profile from "./pages/Profile";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
   const { currentUser } = useContext(UserContext);
@@ -34,6 +35,7 @@ const App = () => {
         }></Route>
       <Route path={`${path}/add`} element={<AddingGoals />}></Route>
       <Route path={`${path}/profile`} element={<Profile />}></Route>
+      <Route path={`${path}/dashboard`} element={<Dashboard />}></Route>
     </Routes>
   );
 };
