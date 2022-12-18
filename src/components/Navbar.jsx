@@ -84,7 +84,7 @@ const Navbar = () => {
         )}
       </ul>
       {currentUser && isOpen && <Dropdown path={currentUser.displayName} />}
-      {currentUser && <AddIcon />}
+      {currentUser && <AddIcon path={currentUser.displayName} />}
     </div>
   );
 };

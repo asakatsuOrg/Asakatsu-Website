@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const BUTTONS = {
   normal:
-    "py-2 px-6 bg-gradient-to-tl from-secondary to-primary rounded-lg font-medium active:scale-90 duration-200",
+    "text-center py-2 px-6 bg-gradient-to-tl from-secondary to-primary rounded-lg font-medium active:scale-90 duration-200",
   bigger:
     "text-xl py-2 px-12 bg-gradient-to-tl from-secondary to-primary rounded-lg font-medium active:scale-90 duration-200",
   google:

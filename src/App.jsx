@@ -33,7 +33,7 @@ const App = () => {
         element={
           currentUser != null ? <FAQ /> : <Navigate to={"/authentication"} />
         }></Route>
-      <Route path={`${path}/add`} element={<AddingGoals />}></Route>
+      <Route path={`${path}/add-goals`} element={<AddingGoals />}></Route>
       <Route path={`${path}/profile`} element={<Profile />}></Route>
       <Route path={`${path}/dashboard`} element={<Dashboard />}></Route>
     </Routes>
