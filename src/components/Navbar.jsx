@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useContext } from "react";
 
 import { UserContext } from "../context/User";
@@ -7,9 +7,11 @@ import { DropdownContext } from "../context/Dropdown";
 
 import Button from "./Button";
 import Dropdown from "./Dropdown";
+import AddIcon from "./AddIcon";
 
 const Navbar = () => {
   const Navigate = useNavigate();
+  const location = useLocation();
   const { currentUser } = useContext(UserContext);
   const { darkMode } = useContext(ThemeContext);
   const { isOpen, setIsOpen } = useContext(DropdownContext);
@@ -22,6 +24,8 @@ const Navbar = () => {
     document.documentElement.classList.remove("dark");
   }
 
+  const userName = currentUser && currentUser.displayName.split(" ").join("");
+
   return (
     <div
       className="bg-background dark:bg-white fixed top-0 left-0 w-full h-16 flex justify-between items-center px-20 z-50"
@@ -32,9 +36,33 @@ const Navbar = () => {
       </h1>
       {/* Links */}
       <ul className="flex gap-8 items-center">
-        <Link to={"/faq"} className="font-medium">
+        <Link
+          to={"/faq"}
+          className={`font-medium ${
+            location.pathname == "/faq" ? "text-twitter" : ""
+          }`}>
           FAQ
         </Link>
+        {currentUser && (
+          <>
+            <Link
+              to={`${userName}/dashboard`}
+              className={`font-medium ${
+                location.pathname == `/${userName}/dashboard`
+                  ? "text-twitter"
+                  : ""
+              }`}>
+              Dashboard
+            </Link>
+            <Link
+              to={`${userName}/goals`}
+              className={`font-medium ${
+                location.pathname == `/${userName}/goals` ? "text-twitter" : ""
+              }`}>
+              Goals
+            </Link>
+          </>
+        )}
         {currentUser == null ? (
           <Button path={"/authentication"} buttonType={"normal"}>
             Sign In
@@ -56,6 +84,7 @@ const Navbar = () => {
         )}
       </ul>
       {currentUser && isOpen && <Dropdown path={currentUser.displayName} />}
+      {currentUser && <AddIcon />}
     </div>
   );
 };
