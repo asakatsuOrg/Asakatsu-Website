@@ -54,7 +54,7 @@ const AddingGoals = () => {
         </>
       )}
 
-      <h1 className="text-center text-4xl font-bold">
+      <h1 className="text-center text-xl md:text-3xl lg:text-4xl font-bold">
         Set your goal and break it into <br /> smaller chunks.
       </h1>
 
@@ -64,37 +64,37 @@ const AddingGoals = () => {
         <input
           type="text"
           placeholder="What is your goal?"
-          className="w-full outline-none bg-transparent px-3 py-2 border-b-[1px]"
+          className="text-sm md:text-base w-full outline-none bg-transparent px-3 py-2 border-b-[1px]"
           name="goal"
           required
         />
-        <div className="grid grid-cols-3 gap-4 px-4">
+        <div className="grid md:grid-cols-3 gap-4">
           <label htmlFor="">Steps to achieve the goal</label>
-          <div className="col-span-2">
+          <div className="md:col-span-2">
             <input
               type="text"
               placeholder="Step 1"
-              className="w-full outline-none bg-transparent px-3 py-2 border-b-[1px]"
+              className="text-sm md:text-base w-full outline-none bg-transparent px-3 py-2 border-b-[1px]"
               name="step1"
               required
             />
             <input
               type="text"
               placeholder="Step 2"
-              className="w-full outline-none bg-transparent px-3 py-2 border-b-[1px] mt-2"
+              className="text-sm md:text-base w-full outline-none bg-transparent px-3 py-2 border-b-[1px] mt-2"
               name="step2"
               required
             />
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-4 items-center px-4">
+        <div className="grid sm:grid-cols-3 gap-4 items-center">
           <label htmlFor="">Do you have a target date for this?</label>
-          <div className="col-span-2">
+          <div className="sm:col-span-2">
             <input
               name="date"
               type="date"
-              className="w-full outline-none bg-transparent px-3 py-2 border-b-[1px]"
+              className="text-sm md:text-base w-full outline-none bg-transparent px-3 py-2 border-b-[1px]"
               required
             />
           </div>
@@ -106,7 +106,7 @@ const AddingGoals = () => {
           rows="5"
           placeholder="What will you achieve by completing this goal?"
           required
-          className="w-full outline-none bg-transparent px-3 py-2 border-b-[1px]"></textarea>
+          className="text-sm md:text-base w-full outline-none bg-transparent px-3 py-2 border-b-[1px]"></textarea>
 
         <button className="text-white text-center py-2 px-6 bg-gradient-to-tl from-secondary to-primary rounded-lg font-medium active:scale-90 duration-200">
           add

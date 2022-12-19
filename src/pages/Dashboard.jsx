@@ -19,7 +19,7 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className="mt-24 w-full flex justify-center">
+    <div className="mt-24 w-full flex justify-center p-4">
       <motion.div
         layout
         className="bg-[#2F2F2F] dark:bg-[#f2f2f2] w-full max-w-[700px] h-[400px] flex flex-col rounded-lg overflow-hidden">

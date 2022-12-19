@@ -57,7 +57,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="mt-[100px] flex flex-col items-center p-4">
+    <div className="mt-[100px] mb-[70px] md:mb-0 flex flex-col items-center p-4">
       {/* User's Info --- Image, Name, Email */}
       <div className="flex flex-col items-center">
         <img className="rounded-full" src={userData.photoURL} alt="" />

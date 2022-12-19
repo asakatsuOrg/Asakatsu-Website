@@ -2,9 +2,11 @@ import Button from "../components/Button";
 
 const Home = () => {
   return (
-    <div className="h-screen flex flex-col justify-center items-center gap-4">
-      <h1 className="text-8xl font-black">ASAKATSU</h1>
-      <p className="text-2xl text-center text-white text-opacity-60 dark:text-black">
+    <div className="h-screen flex flex-col justify-center items-center gap-4 p-4">
+      <h1 className="text-5xl md:text-[6vw] lg:text-8xl font-black">
+        ASAKATSU
+      </h1>
+      <p className="text-base md:text-2xl text-center text-white text-opacity-60 dark:text-black">
         A website where you can keep track of your goal's progress, and <br />
         contribute to open source in the same time.
       </p>

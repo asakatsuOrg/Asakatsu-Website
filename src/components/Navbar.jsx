@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="bg-background dark:bg-white fixed top-0 left-0 w-full h-16 flex justify-between items-center px-20 z-50"
+      className="bg-background dark:bg-white fixed top-0 left-0 w-full h-16 flex justify-between items-center px-4 md:px-8 lg:px-20 z-50"
       style={{ boxShadow: "0 5px 24px rgba(0, 0, 0, .25)" }}>
       {/* Logo as a Text */}
       <h1 onClick={goToHomePage} className="text-2xl font-black cursor-pointer">

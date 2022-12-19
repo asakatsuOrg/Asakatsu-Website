@@ -9,21 +9,24 @@ const EachUserDashboard = ({ userData, currentUser }) => {
       transition={{ duration: 0.3 }}
       layout="position"
       key={userData.uid}
-      className={`grid grid-cols-3 items-center border-b-2 py-3 px-4 border-white border-opacity-40 dark:border-black dark:border-opacity-25 ${
+      className={`grid grid-cols-2 md:grid-cols-3 items-center border-b-2 py-3 px-4 border-white border-opacity-40 dark:border-black dark:border-opacity-25 ${
         currentUser.uid == userData.uid
           ? "border-twitter border-opacity-100"
           : ""
       }`}>
-      <img
-        className="w-[40px] rounded-full"
-        src={userData.photoURL}
-        referrerPolicy="no-referrer"
-        alt=""
-      />
+      <div className="flex gap-4 items-center">
+        <img
+          className="w-[30px] md:w-[40px] rounded-full"
+          src={userData.photoURL}
+          referrerPolicy="no-referrer"
+          alt=""
+        />
+        <p className="block md:hidden text-sm">{userData.displayName}</p>
+      </div>
 
-      <p className="text-center">{userData.displayName}</p>
+      <p className="text-center hidden md:block">{userData.displayName}</p>
 
-      <div className="flex justify-end gap-4 text-xl">
+      <div className="flex justify-end gap-2 md:gap-4 text-base md:text-xl">
         {userData.twitter.length != 0 && (
           <a
             className="text-twitter"

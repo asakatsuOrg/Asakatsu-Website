@@ -11,7 +11,7 @@ const AddIcon = ({ path }) => {
   return (
     <div
       onClick={goToAddGoalPage}
-      className={`text-white fixed bottom-4 right-4 bg-primary text-3xl p-3 rounded-full active:scale-90 active:-translate-y-4 duration-200 ${
+      className={`text-white fixed bottom-4 right-4 bg-primary text-xl md:text-3xl p-3 rounded-full active:scale-90 active:-translate-y-4 duration-200 ${
         location.pathname == `/${userName}/add-goals` && "hidden"
       }`}
       style={{

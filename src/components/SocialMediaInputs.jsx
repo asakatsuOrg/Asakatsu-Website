@@ -17,7 +17,7 @@ const SocialMediaInputs = ({
         placeholder={`${SocialMedia} Handle`}
         name={socialMedia}
         value={socialMediaValue}
-        className={`py-2 px-4 w-full bg-transparent border-2 border-white border-opacity-60 dark:border-black dark:border-opacity-30 rounded-md outline-none focus:border-white dark:focus:border-black duration-200`}
+        className={`text-sm md:text-base py-2 px-4 w-full bg-transparent border-2 border-white border-opacity-60 dark:border-black dark:border-opacity-30 rounded-md outline-none focus:border-white dark:focus:border-black duration-200`}
         onChange={changeHandler}
         id={socialMedia}
       />

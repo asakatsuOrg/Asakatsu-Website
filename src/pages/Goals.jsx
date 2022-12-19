@@ -41,7 +41,7 @@ const Goals = () => {
   return (
     <motion.div
       layout
-      className="mt-[80px] px-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      className="mt-[80px] px-4 md:px-8 lg:px-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {goals.map((goal) => {
         return (
           <motion.div
@@ -57,18 +57,20 @@ const Goals = () => {
             </div>
             <ul className="relative list-disc p-4">
               <div className="w-[5px] h-[20px] group-hover:w-[7px] bg-green-500 rounded-r-lg absolute top-1/2 left-0 -translate-y-1/2 duration-200"></div>
-              <h2 className="text-lg">Steps to achieve the goal</h2>
-              <li className="ml-6">{goal.step1}</li>
-              <li className="ml-6">{goal.step2}</li>
+              <h2 className="text-base md:text-lg">
+                Steps to achieve the goal
+              </h2>
+              <li className="ml-6 text-sm md:text-base">{goal.step1}</li>
+              <li className="ml-6 text-sm md:text-base">{goal.step2}</li>
             </ul>
-            <p className="relative p-4">
+            <p className="relative p-4 text-sm md:text-base">
               <div className="w-[5px] h-[20px] group-hover:w-[7px] bg-orange-600 rounded-r-lg absolute top-1/2 left-0 -translate-y-1/2 duration-200"></div>
               {goal.achievement}
             </p>
             <button
               value={goal.id}
               onClick={deletingGoal}
-              className="text-white mx-4 mb-4 bg-green-600 px-6 py-2 rounded-md">
+              className="text-sm md:text-base text-white mx-4 mb-4 bg-green-600 px-6 py-2 rounded-md">
               Done
             </button>
           </motion.div>
