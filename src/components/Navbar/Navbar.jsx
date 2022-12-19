@@ -1,13 +1,17 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
-import { UserContext } from "../context/User";
-import { ThemeContext } from "../context/Theme";
-import { DropdownContext } from "../context/Dropdown";
+import { UserContext } from "../../context/User";
+import { ThemeContext } from "../../context/Theme";
+import { DropdownContext } from "../../context/Dropdown";
 
-import Button from "./Button";
-import Dropdown from "./Dropdown";
-import AddIcon from "./AddIcon";
+import Button from "../Button";
+import Dropdown from "../Dropdown";
+import AddIcon from "../AddIcon";
+
+import { AiOutlineMenu } from "react-icons/ai";
+import NavLinks from "./NavLinks";
+import { signingOut } from "../../utils/Authentication";
 
 const Navbar = () => {
   const Navigate = useNavigate();
@@ -15,6 +19,7 @@ const Navbar = () => {
   const { currentUser } = useContext(UserContext);
   const { darkMode } = useContext(ThemeContext);
   const { isOpen, setIsOpen } = useContext(DropdownContext);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   const goToHomePage = () => Navigate("/");
 
@@ -31,14 +36,19 @@ const Navbar = () => {
       className="bg-background dark:bg-white fixed top-0 left-0 w-full h-16 flex justify-between items-center px-4 md:px-8 lg:px-20 z-50"
       style={{ boxShadow: "0 5px 24px rgba(0, 0, 0, .25)" }}>
       {/* Logo as a Text */}
-      <h1 onClick={goToHomePage} className="text-2xl font-black cursor-pointer">
+      <h1
+        onClick={goToHomePage}
+        className="text-xl md:text-2xl font-black cursor-pointer">
         ASAKATSU
       </h1>
       {/* Links */}
-      <ul className="flex gap-8 items-center">
+      <ul
+        className={`flex gap-6 lg:gap-8 items-center ${
+          currentUser && "hidden md:flex"
+        }`}>
         <Link
           to={"/faq"}
-          className={`font-medium ${
+          className={`text-sm md:text-base font-medium ${
             location.pathname == "/faq" ? "text-twitter" : ""
           }`}>
           FAQ
@@ -83,8 +93,25 @@ const Navbar = () => {
           </div>
         )}
       </ul>
+      {currentUser && (
+        <NavLinks
+          currentUser={currentUser}
+          userName={userName}
+          signOut={signingOut}
+          open={isNavOpen}
+          setOpen={setIsNavOpen}
+        />
+      )}
+      {currentUser && (
+        <AiOutlineMenu
+          className="block md:hidden text-2xl"
+          onClick={() => setIsNavOpen(!isNavOpen)}
+        />
+      )}
       {currentUser && isOpen && <Dropdown path={currentUser.displayName} />}
-      {currentUser && <AddIcon path={currentUser.displayName} />}
+      {currentUser && (
+        <AddIcon path={currentUser.displayName} setOpen={setIsNavOpen} />
+      )}
     </div>
   );
 };

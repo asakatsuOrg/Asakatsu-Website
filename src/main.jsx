@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import { UserProvider } from "./context/User";
 import { ThemeProvider } from "./context/Theme";
 import { DropdownProvider } from "./context/Dropdown";
