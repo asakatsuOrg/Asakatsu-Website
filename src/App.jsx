@@ -9,6 +9,7 @@ import FAQ from "./pages/FAQ";
 import AddingGoals from "./pages/AddingGoals";
 import Profile from "./pages/Profile";
 import Dashboard from "./pages/Dashboard";
+import Goals from "./pages/Goals";
 
 const App = () => {
   const { currentUser } = useContext(UserContext);
@@ -36,6 +37,7 @@ const App = () => {
       <Route path={`${path}/add-goals`} element={<AddingGoals />}></Route>
       <Route path={`${path}/profile`} element={<Profile />}></Route>
       <Route path={`${path}/dashboard`} element={<Dashboard />}></Route>
+      <Route path={`${path}/goals`} element={<Goals />}></Route>
     </Routes>
   );
 };
