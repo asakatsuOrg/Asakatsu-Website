@@ -62,7 +62,9 @@ const Profile = () => {
       <div className="flex flex-col items-center">
         <img className="rounded-full" src={userData.photoURL} alt="" />
         <h2 className="text-2xl font-medium">{userData.displayName}</h2>
-        <small className="text-white text-opacity-70">{userData.email}</small>
+        <small className="text-white text-opacity-70 dark:text-black">
+          {userData.email}
+        </small>
       </div>
 
       {/* Checkbox Toggling for Private and DarkMode */}

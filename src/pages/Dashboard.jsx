@@ -22,7 +22,7 @@ const Dashboard = () => {
     <div className="mt-24 w-full flex justify-center">
       <motion.div
         layout
-        className="bg-[#2F2F2F] w-full max-w-[700px] h-[400px] flex flex-col rounded-lg overflow-hidden">
+        className="bg-[#2F2F2F] dark:bg-[#f2f2f2] w-full max-w-[700px] h-[400px] flex flex-col rounded-lg overflow-hidden">
         <AnimatePresence>
           {usersData.map((userData) => {
             return (

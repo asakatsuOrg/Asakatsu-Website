@@ -45,10 +45,10 @@ const AddingGoals = () => {
     <div className="mt-[100px] flex flex-col items-center p-4 overflow-x-hidden">
       {isAdded && (
         <>
-          <div className="fixed top-0 left-0 w-full h-screen bg-[#0D180E] -z-50"></div>
+          <div className="fixed top-0 left-0 w-full h-screen bg-[#0D180E] dark:bg-green-100 -z-50"></div>
           <motion.div
             animate={{ x: [100, -10, 0] }}
-            className="fixed bottom-4 right-0 bg-primary px-8 py-2 rounded-l-xl">
+            className="text-white fixed bottom-4 right-0 bg-primary px-8 py-2 rounded-l-xl">
             Good Luck, I'll take you to Goals Page in 5s...
           </motion.div>
         </>
@@ -108,7 +108,7 @@ const AddingGoals = () => {
           required
           className="w-full outline-none bg-transparent px-3 py-2 border-b-[1px]"></textarea>
 
-        <button className="text-center py-2 px-6 bg-gradient-to-tl from-secondary to-primary rounded-lg font-medium active:scale-90 duration-200">
+        <button className="text-white text-center py-2 px-6 bg-gradient-to-tl from-secondary to-primary rounded-lg font-medium active:scale-90 duration-200">
           add
         </button>
       </form>

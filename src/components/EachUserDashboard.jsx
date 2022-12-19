@@ -9,7 +9,7 @@ const EachUserDashboard = ({ userData, currentUser }) => {
       transition={{ duration: 0.3 }}
       layout="position"
       key={userData.uid}
-      className={`grid grid-cols-3 items-center border-b-2 py-3 px-4 border-white border-opacity-40 ${
+      className={`grid grid-cols-3 items-center border-b-2 py-3 px-4 border-white border-opacity-40 dark:border-black dark:border-opacity-25 ${
         currentUser.uid == userData.uid
           ? "border-twitter border-opacity-100"
           : ""
