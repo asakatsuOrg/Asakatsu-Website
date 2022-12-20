@@ -2,7 +2,14 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { AiOutlineClose } from "react-icons/ai";
 
-const NavLinks = ({ currentUser, userName, signOut, open, setOpen }) => {
+const NavLinks = ({
+  currentUser,
+  userName,
+  signOut,
+  open,
+  setOpen,
+  location,
+}) => {
   const Navigate = useNavigate();
   const signingOut = () => {
     signOut();
@@ -32,20 +39,34 @@ const NavLinks = ({ currentUser, userName, signOut, open, setOpen }) => {
       <ul className="w-full flex flex-col">
         <Link
           onClick={() => setOpen(!open)}
+          to={`/${userName}/profile`}
+          className={`p-4 text-xl font-medium bg-[#1d1d1d] dark:bg-[#f2f2f2] ${
+            location == `/${userName}/profile` && "text-primary"
+          }`}>
+          Profile
+        </Link>
+        <Link
+          onClick={() => setOpen(!open)}
           to={`/${userName}/goals`}
-          className="p-4 text-xl font-medium bg-[#1d1d1d] dark:bg-[#f2f2f2]">
+          className={`p-4 text-xl font-medium bg-[#1d1d1d] dark:bg-[#f2f2f2] ${
+            location == `/${userName}/goals` && "text-primary"
+          }`}>
           Goals
         </Link>
         <Link
           onClick={() => setOpen(!open)}
           to={`/${userName}/dashboard`}
-          className="p-4 text-xl font-medium bg-[#1d1d1d] dark:bg-[#f2f2f2]">
+          className={`p-4 text-xl font-medium bg-[#1d1d1d] dark:bg-[#f2f2f2] ${
+            location == `/${userName}/dashboard` && "text-primary"
+          }`}>
           Dashboard
         </Link>
         <Link
           onClick={() => setOpen(!open)}
           to={`/faq`}
-          className="p-4 text-xl font-medium bg-[#1d1d1d] dark:bg-[#f2f2f2]">
+          className={`p-4 text-xl font-medium bg-[#1d1d1d] dark:bg-[#f2f2f2] ${
+            location == `/faq` && "text-primary"
+          }`}>
           FAQ
         </Link>
         <button

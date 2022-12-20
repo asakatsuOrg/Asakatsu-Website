@@ -100,6 +100,7 @@ const Navbar = () => {
           signOut={signingOut}
           open={isNavOpen}
           setOpen={setIsNavOpen}
+          location={location.pathname}
         />
       )}
       {currentUser && (
