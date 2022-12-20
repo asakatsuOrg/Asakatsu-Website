@@ -1,34 +1,44 @@
+// Packages
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useContext, useState } from "react";
 
+// Context
 import { UserContext } from "../../context/User";
 import { ThemeContext } from "../../context/Theme";
 import { DropdownContext } from "../../context/Dropdown";
 
+// Component
 import Button from "../Button";
 import Dropdown from "../Dropdown";
 import AddIcon from "../AddIcon";
+import NavLinks from "./NavLinks"; // This component is for small screens
 
+// Icons
 import { AiOutlineMenu } from "react-icons/ai";
-import NavLinks from "./NavLinks";
+
+// Firebase
 import { signingOut } from "../../utils/Authentication";
 
 const Navbar = () => {
   const Navigate = useNavigate();
   const location = useLocation();
+
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
   const { currentUser } = useContext(UserContext);
   const { darkMode } = useContext(ThemeContext);
   const { isOpen, setIsOpen } = useContext(DropdownContext);
-  const [isNavOpen, setIsNavOpen] = useState(false);
 
   const goToHomePage = () => Navigate("/");
 
+  // Theme Toggling
   if (darkMode == true) {
     document.documentElement.classList.add("dark");
   } else {
     document.documentElement.classList.remove("dark");
   }
 
+  // The user will have a route for themselves
   const userName = currentUser && currentUser.displayName.split(" ").join("");
 
   return (
@@ -41,6 +51,7 @@ const Navbar = () => {
         className="text-xl md:text-2xl font-black cursor-pointer">
         ASAKATSU
       </h1>
+
       {/* Links */}
       <ul
         className={`flex gap-6 lg:gap-8 items-center ${
@@ -109,10 +120,8 @@ const Navbar = () => {
           onClick={() => setIsNavOpen(!isNavOpen)}
         />
       )}
-      {currentUser && isOpen && <Dropdown path={currentUser.displayName} />}
-      {currentUser && (
-        <AddIcon path={currentUser.displayName} setOpen={setIsNavOpen} />
-      )}
+      {currentUser && isOpen && <Dropdown userName={userName} />}
+      {currentUser && <AddIcon userName={userName} setOpen={setIsNavOpen} />}
     </div>
   );
 };

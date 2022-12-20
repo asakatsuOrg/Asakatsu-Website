@@ -11,7 +11,8 @@ const NavLinks = ({
   location,
 }) => {
   const Navigate = useNavigate();
-  const signingOut = () => {
+
+  const userSignOut = () => {
     signOut();
     Navigate("/");
     setOpen(false);
@@ -70,7 +71,7 @@ const NavLinks = ({
           FAQ
         </Link>
         <button
-          onClick={signingOut}
+          onClick={userSignOut}
           className="bg-red-700 text-white px-4 py-2 rounded-lg self-center mt-8">
           Sign Out
         </button>

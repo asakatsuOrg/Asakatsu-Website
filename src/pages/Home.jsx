@@ -6,7 +6,7 @@ const Home = () => {
       <h1 className="text-5xl md:text-[6vw] lg:text-8xl font-black">
         ASAKATSU
       </h1>
-      <p className="text-base md:text-2xl text-center text-white text-opacity-60 dark:text-black">
+      <p className="text-base md:text-2xl text-center opacity-60 dark:opacity-80">
         A website where you can keep track of your goal's progress, and <br />
         contribute to open source in the same time.
       </p>
@@ -14,7 +14,7 @@ const Home = () => {
         Get Started
       </Button>
       <svg
-        className="absolute bottom-0 left-0 -z-50"
+        className="fixed bottom-0 left-0 -z-50"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 300">
         <path

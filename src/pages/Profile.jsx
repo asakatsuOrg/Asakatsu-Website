@@ -16,9 +16,9 @@ import PrivateAndDarkMode from "../components/PrivateAndDarkMode";
 
 const Profile = () => {
   const { currentUser } = useContext(UserContext);
-  const docRef = doc(db, "users", currentUser.uid);
-
   const [userData, setUserData] = useState({});
+
+  const docRef = doc(db, "users", currentUser.uid);
 
   useEffect(() => {
     onSnapshot(docRef, (snapshot) => {

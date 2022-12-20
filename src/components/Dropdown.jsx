@@ -2,13 +2,12 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { signingOut } from "../utils/Authentication";
 
-const Dropdown = ({ path }) => {
-  const navigate = useNavigate();
-  const userName = path.split(" ").join("");
+const Dropdown = ({ userName }) => {
+  const Navigate = useNavigate();
 
   const userSignOut = async () => {
     await signingOut();
-    navigate("/authentication");
+    Navigate("/authentication");
   };
 
   return (

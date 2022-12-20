@@ -20,6 +20,7 @@ googleProvider.setCustomParameters({
 
 export const signInWithGoogle = () => signInWithPopup(auth, googleProvider);
 
+// It'll be used in context/User.jsx
 export const isSignedIn = (callback) => {
   return onAuthStateChanged(auth, callback);
 };

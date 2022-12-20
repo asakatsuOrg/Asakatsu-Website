@@ -2,10 +2,9 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 import { AiOutlinePlus } from "react-icons/ai";
 
-const AddIcon = ({ path, setOpen }) => {
+const AddIcon = ({ userName, setOpen }) => {
   const Navigate = useNavigate();
   const location = useLocation();
-  const userName = path.split(" ").join("");
 
   const goToAddGoalPage = () => {
     Navigate(`${userName}/add-goals`);

@@ -1,11 +1,11 @@
 import React from "react";
 
 const SocialMediaInputs = ({
-  icon,
-  socialMedia,
-  SocialMedia,
-  socialMediaValue,
-  changeHandler,
+  icon, // Social Media logos
+  socialMedia, // name, htmlFor, id
+  SocialMedia, // placeholder
+  socialMediaValue, // value
+  changeHandler, // onClick
 }) => {
   return (
     <label

@@ -1,14 +1,19 @@
+// Packages
 import { onSnapshot, collection, query, where } from "firebase/firestore";
 import { useEffect, useState, useContext } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+// Context & Utils
 import { db } from "../utils/Firestore";
 import { UserContext } from "../context/User";
+
+// Component
 import EachUserDashboard from "../components/EachUserDashboard";
 
 const Dashboard = () => {
   const [usersData, setUsersData] = useState([]);
   const { currentUser } = useContext(UserContext);
+
   const colRef = collection(db, "users");
   const q = query(colRef, where("private", "==", false));
 

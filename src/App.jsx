@@ -1,20 +1,25 @@
+// Packages
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useContext } from "react";
 
+// Context
 import { UserContext } from "./context/User";
 
-import Home from "./pages/Home";
-import Authentication from "./pages/Authentication";
-import FAQ from "./pages/FAQ";
-import AddingGoals from "./pages/AddingGoals";
-import Profile from "./pages/Profile";
-import Dashboard from "./pages/Dashboard";
-import Goals from "./pages/Goals";
+// Page
+import {
+  Home,
+  Authentication,
+  FAQ,
+  AddingGoals,
+  Profile,
+  Dashboard,
+  Goals,
+} from "./pages";
 
 const App = () => {
   const { currentUser } = useContext(UserContext);
 
-  const path = currentUser && currentUser.displayName.split(" ").join("");
+  const userName = currentUser && currentUser.displayName.split(" ").join("");
 
   return (
     <Routes>
@@ -26,18 +31,15 @@ const App = () => {
           currentUser == null ? (
             <Authentication />
           ) : (
-            <Navigate to={`/${path}/profile`} />
+            <Navigate to={`/${userName}/profile`} />
           )
         }></Route>
-      <Route
-        path={`/${path}`}
-        element={
-          currentUser != null ? <FAQ /> : <Navigate to={"/authentication"} />
-        }></Route>
-      <Route path={`${path}/add-goals`} element={<AddingGoals />}></Route>
-      <Route path={`${path}/profile`} element={<Profile />}></Route>
-      <Route path={`${path}/dashboard`} element={<Dashboard />}></Route>
-      <Route path={`${path}/goals`} element={<Goals />}></Route>
+
+      {/* When the user is signed in */}
+      <Route path={`${userName}/add-goals`} element={<AddingGoals />}></Route>
+      <Route path={`${userName}/profile`} element={<Profile />}></Route>
+      <Route path={`${userName}/dashboard`} element={<Dashboard />}></Route>
+      <Route path={`${userName}/goals`} element={<Goals />}></Route>
     </Routes>
   );
 };
