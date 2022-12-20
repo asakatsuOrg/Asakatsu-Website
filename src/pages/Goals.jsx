@@ -1,0 +1,56 @@
+// Packages
+import { useContext, useEffect, useState } from "react";
+import {
+  onSnapshot,
+  collection,
+  doc,
+  deleteDoc,
+  query,
+  orderBy,
+} from "firebase/firestore";
+import { motion } from "framer-motion";
+
+// Utils & Context
+import { db } from "../utils/Firestore";
+import { UserContext } from "../context/User";
+import EachGoals from "../components/EachGoals";
+
+const Goals = () => {
+  const { currentUser } = useContext(UserContext);
+  const [goals, setGoals] = useState([]);
+
+  const colRef = collection(db, `users/${currentUser.uid}/Goals`);
+  const q = query(colRef, orderBy("targetDate"));
+
+  useEffect(() => {
+    onSnapshot(q, (snapshot) => {
+      setGoals(
+        snapshot.docs.map((goals) => ({
+          ...goals.data(),
+          id: goals.id,
+        }))
+      );
+    });
+  }, []);
+
+  const deletingGoal = async (e) => {
+    const { value } = e.target;
+    const docRef = doc(db, `users/${currentUser.uid}/Goals/${value}`);
+
+    deleteDoc(docRef);
+  };
+
+  return (
+    <motion.div
+      layout
+      className="mt-[80px] px-4 md:px-8 lg:px-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {goals.map((goal) => {
+        return (
+          <EachGoals key={goal.id} goal={goal} deletingGoal={deletingGoal} />
+        );
+      })}
+    </motion.div>
+  );
+};
+
+export default Goals;
