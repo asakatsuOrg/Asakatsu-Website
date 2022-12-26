@@ -97,3 +97,10 @@ h1 {
   background-size: 75%;
   background-position: center;
 }
+
+#scrollBar::-webkit-scrollbar {
+  width: 5px;
+}
+#scrollBar::-webkit-scrollbar-thumb {
+  @apply bg-white bg-opacity-50 dark:bg-[#bebebe] rounded-full;
+}
