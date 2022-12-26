@@ -15,11 +15,13 @@ import { AiFillDelete } from "react-icons/ai";
 import SocialMediaInputs from "../components/SocialMediaInputs";
 import PrivateAndDarkMode from "../components/PrivateAndDarkMode";
 import DeleteUser from "../components/DeleteUser";
+import IsSaved from "../components/IsSaved";
 
 const Profile = () => {
   const { currentUser } = useContext(UserContext);
   const [userData, setUserData] = useState({});
   const [isDeleteOpen, setIsDeleteOpen] = useState(false);
+  const [isSaved, setIsSaved] = useState(false);
 
   const docRef = doc(db, "users", currentUser.uid);
 
@@ -38,25 +40,49 @@ const Profile = () => {
   const twitterChangeHandler = (e) => {
     updateDoc(docRef, {
       twitter: e.target.value,
-    });
+    })
+      .then(() => setIsSaved(true))
+      .then(() => {
+        setTimeout(() => {
+          setIsSaved(false);
+        }, 1000);
+      });
   };
 
   const githubChangeHandler = (e) => {
     updateDoc(docRef, {
       github: e.target.value,
-    });
+    })
+      .then(() => setIsSaved(true))
+      .then(() => {
+        setTimeout(() => {
+          setIsSaved(false);
+        }, 1000);
+      });
   };
 
   const youtubeChangeHandler = (e) => {
     updateDoc(docRef, {
       youtube: e.target.value,
-    });
+    })
+      .then(() => setIsSaved(true))
+      .then(() => {
+        setTimeout(() => {
+          setIsSaved(false);
+        }, 1000);
+      });
   };
 
   const linkedinChangeHandler = (e) => {
     updateDoc(docRef, {
       linkedin: e.target.value,
-    });
+    })
+      .then(() => setIsSaved(true))
+      .then(() => {
+        setTimeout(() => {
+          setIsSaved(false);
+        }, 1000);
+      });
   };
 
   return (
@@ -116,6 +142,8 @@ const Profile = () => {
           changeHandler={linkedinChangeHandler}
         />
       </div>
+
+      {isSaved && <IsSaved />}
 
       <button
         onClick={() => setIsDeleteOpen(true)}

@@ -10,7 +10,7 @@ const SocialMediaInputs = ({
   return (
     <label
       htmlFor={socialMedia}
-      className="w-full max-w-[600px] flex gap-4 items-center">
+      className="relative w-full max-w-[600px] flex gap-4 items-center">
       <span className="text-2xl">{icon}</span>
       <input
         type="text"
@@ -21,6 +21,9 @@ const SocialMediaInputs = ({
         onChange={changeHandler}
         id={socialMedia}
       />
+      {/* <span className="absolute right-4" {...saved}>
+        Saved! ✅
+      </span> */}
     </label>
   );
 };

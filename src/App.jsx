@@ -31,7 +31,7 @@ const App = () => {
           currentUser == null ? (
             <Authentication />
           ) : (
-            <Navigate to={`/${userName}/profile`} />
+            <Navigate to={`/${userName}/goals`} />
           )
         }></Route>
 
