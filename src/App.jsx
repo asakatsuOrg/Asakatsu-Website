@@ -1,9 +1,11 @@
 // Packages
 import { Routes, Route, Navigate } from "react-router-dom";
-import { useContext } from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-// Context
-import { UserContext } from "./context/User";
+import { userSelector } from "./redux/User/User-Selector";
+import { userAction } from "./redux/User/User-Action";
+import { isSignedIn } from "./utils/Authentication";
 
 // Page
 import {
@@ -17,9 +19,16 @@ import {
 } from "./pages";
 
 const App = () => {
-  const { currentUser } = useContext(UserContext);
+  const dispatch = useDispatch();
+  const currentUser = useSelector(userSelector);
 
   const userName = currentUser && currentUser.displayName.split(" ").join("");
+
+  useEffect(() => {
+    isSignedIn((user) => {
+      dispatch(userAction(user));
+    });
+  }, []);
 
   return (
     <Routes>

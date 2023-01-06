@@ -1,16 +1,18 @@
 import { deleteDoc, doc } from "firebase/firestore";
-import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
+
+// Redux
+import { userSelector } from "../redux/User/User-Selector";
 
 import { AiFillDelete } from "react-icons/ai";
 
-import { UserContext } from "../context/User";
 import { signingOut } from "../utils/Authentication";
 import { db } from "../utils/Firestore";
 
 const DeleteUser = ({ ...closing }) => {
-  const { currentUser } = useContext(UserContext);
+  const currentUser = useSelector(userSelector);
   const Navigation = useNavigate();
 
   const DeletingUserData = async () => {

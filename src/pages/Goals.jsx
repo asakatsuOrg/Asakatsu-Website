@@ -1,5 +1,5 @@
 // Packages
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   onSnapshot,
   collection,
@@ -9,15 +9,19 @@ import {
   orderBy,
 } from "firebase/firestore";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
+
+// Redux
+import { userSelector } from "../redux/User/User-Selector";
 
 // Utils & Context
 import { db } from "../utils/Firestore";
-import { UserContext } from "../context/User";
 import EachGoals from "../components/EachGoals";
 
 const Goals = () => {
-  const { currentUser } = useContext(UserContext);
   const [goals, setGoals] = useState([]);
+
+  const currentUser = useSelector(userSelector);
 
   const colRef = collection(db, `users/${currentUser.uid}/Goals`);
   const q = query(colRef, orderBy("targetDate"));

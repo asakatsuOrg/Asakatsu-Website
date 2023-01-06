@@ -1,11 +1,15 @@
 // Packages
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useContext, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+
+// Redux
+import { userSelector } from "../../redux/User/User-Selector";
+import { dropdownAction } from "../../redux/Dropdown/Dropdown-Action";
+import { dropdownSelector } from "../../redux/Dropdown/Dropdown-Selector";
 
 // Context
-import { UserContext } from "../../context/User";
 import { ThemeContext } from "../../context/Theme";
-import { DropdownContext } from "../../context/Dropdown";
 
 // Component
 import Button from "../Button";
@@ -23,11 +27,13 @@ const Navbar = () => {
   const Navigate = useNavigate();
   const location = useLocation();
 
+  const currentUser = useSelector(userSelector);
+  const dispatch = useDispatch();
+  const isOpen = useSelector(dropdownSelector);
+
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  const { currentUser } = useContext(UserContext);
   const { darkMode } = useContext(ThemeContext);
-  const { isOpen, setIsOpen } = useContext(DropdownContext);
 
   const goToHomePage = () => Navigate("/");
 
@@ -92,7 +98,7 @@ const Navbar = () => {
           <div
             id="userImage"
             className="relative"
-            onClick={() => setIsOpen(!isOpen)}>
+            onClick={() => dispatch(dropdownAction(isOpen))}>
             <img
               className={`w-[38px] rounded-full duration-200 ${
                 isOpen == true ? "scale-90" : "scale-100"

@@ -2,17 +2,18 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { collection, addDoc } from "firebase/firestore";
-import { useContext, useState } from "react";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 
-// Context
-import { UserContext } from "../context/User";
+// Redux
+import { userSelector } from "../redux/User/User-Selector";
 
 // utils
 import { db } from "../utils/Firestore";
 
 const AddingGoals = () => {
   const [isAdded, setIsAdded] = useState(false);
-  const { currentUser } = useContext(UserContext);
+  const currentUser = useSelector(userSelector);
 
   const Navigate = useNavigate();
 

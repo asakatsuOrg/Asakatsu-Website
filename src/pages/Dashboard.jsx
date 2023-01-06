@@ -6,19 +6,22 @@ import {
   where,
   orderBy,
 } from "firebase/firestore";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useSelector } from "react-redux";
+
+// Redux
+import { userSelector } from "../redux/User/User-Selector";
 
 // Context & Utils
 import { db } from "../utils/Firestore";
-import { UserContext } from "../context/User";
 
 // Component
 import EachUserDashboard from "../components/EachUserDashboard";
 
 const Dashboard = () => {
   const [usersData, setUsersData] = useState([]);
-  const { currentUser } = useContext(UserContext);
+  const currentUser = useSelector(userSelector);
 
   const colRef = collection(db, "users");
   const q = query(colRef, where("private", "==", false), orderBy("createdAt"));

@@ -1,11 +1,12 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+
+// Redux
+import { userSelector } from "../redux/User/User-Selector";
 
 // Firebase
 import { onSnapshot, doc, updateDoc } from "firebase/firestore";
 import { db } from "../utils/Firestore";
-
-// Context
-import { UserContext } from "../context/User";
 
 // Icons
 import { FaTwitter, FaGithub, FaYoutube, FaLinkedin } from "react-icons/fa";
@@ -18,7 +19,7 @@ import DeleteUser from "../components/DeleteUser";
 import IsSaved from "../components/IsSaved";
 
 const Profile = () => {
-  const { currentUser } = useContext(UserContext);
+  const currentUser = useSelector(userSelector);
   const [userData, setUserData] = useState({});
   const [isDeleteOpen, setIsDeleteOpen] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
