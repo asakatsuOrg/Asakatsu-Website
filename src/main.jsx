@@ -11,6 +11,7 @@ import { store } from "./redux/Store";
 import Navbar from "./components/Navbar/Navbar";
 
 import { ThemeProvider } from "./context/Theme"; // Dark & Light using localStorage
+import Footer from "./components/Footer";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <ThemeProvider>
           <Navbar />
           <App />
+          <Footer />
         </ThemeProvider>
       </BrowserRouter>
     </Provider>
