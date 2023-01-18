@@ -49,7 +49,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="w-full h-16 flex justify-center items-center fixed top-0 left-0 bg-background dark:bg-white"
+      className="w-full h-16 flex justify-center items-center fixed top-0 left-0 bg-background dark:bg-white z-50"
       style={{ boxShadow: "0 5px 24px rgba(0, 0, 0, .25)" }}>
       <div className="w-full max-w-[1536px] h-full flex justify-between items-center px-4 md:px-8 lg:px-20 z-50">
         {/* Logo as a Text */}

@@ -104,3 +104,64 @@ h1 {
 #scrollBar::-webkit-scrollbar-thumb {
   @apply bg-white bg-opacity-50 dark:bg-[#bebebe] rounded-full;
 }
+
+.num {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #0099ff;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.2em;
+}
+
+.num::after {
+  content: "";
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  transform: scale(1.2);
+  border: 1px solid #0099ff;
+  border-radius: 50%;
+  animation: border 2s infinite alternate;
+}
+
+.num::before {
+  content: "";
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  transform: scale(1.4);
+  border: 1px solid #0099ff;
+  border-radius: 50%;
+  animation: border 2s infinite alternate 0.5s;
+}
+@keyframes border {
+  from {
+    border-color: #0099ff;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div {
+  /* change div to reference your elements you put in <Masonry> */
+  margin-bottom: 30px;
+}
