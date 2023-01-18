@@ -23,11 +23,13 @@ const Information2 = () => {
           return (
             <div
               key={information.id}
-              className="bg-background shadow-2xl p-6 rounded-lg hover:-translate-y-4 duration-200">
+              className="bg-background dark:bg-white shadow-2xl p-6 rounded-lg hover:-translate-y-4 duration-200">
               <information.icon className="text-3xl text-primary mb-4" />
-              <p className="text-[#B9B9B9] text-lg">{information.detail}</p>
+              <p className="text-[#B9B9B9] dark:text-[#212121] text-lg">
+                {information.detail}
+              </p>
               {information.list && (
-                <ul className="list-disc text-[#B9B9B9] p-2 px-6">
+                <ul className="list-disc text-[#B9B9B9] dark:text-[#212121] p-2 px-6">
                   {information.list.map((list) => {
                     return (
                       <>

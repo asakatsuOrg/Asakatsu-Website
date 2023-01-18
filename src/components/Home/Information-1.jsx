@@ -13,9 +13,11 @@ const Information1 = () => {
           return (
             <div
               key={information.id}
-              className="basis-[300px] grow bg-background shadow-2xl p-6 rounded-lg hover:-translate-y-4 duration-200">
+              className="basis-[300px] grow bg-background dark:bg-white shadow-2xl p-6 rounded-lg hover:-translate-y-4 duration-200">
               <p className="num">{information.id}</p>
-              <p className="text-[#B9B9B9]">{information.detail}</p>
+              <p className="text-[#B9B9B9] dark:text-[#212121]">
+                {information.detail}
+              </p>
             </div>
           );
         })}
