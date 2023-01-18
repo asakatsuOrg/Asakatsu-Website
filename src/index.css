@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  @apply relative min-h-full pb-12 bg-background text-white dark:bg-white dark:text-black;
+  @apply relative min-h-full pb-24 md:pb-12 bg-background text-white dark:bg-white dark:text-black;
   font-family: "Roboto", sans-serif;
 }
 
