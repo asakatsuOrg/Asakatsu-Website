@@ -1,3 +1,8 @@
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
+
 // Packages
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useEffect } from "react";

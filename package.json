@@ -12,6 +12,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "firebase": "^9.15.0",
     "framer-motion": "^7.10.2",
     "react": "^18.2.0",

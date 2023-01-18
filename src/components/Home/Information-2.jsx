@@ -12,7 +12,9 @@ const breakpointColumnsObj = {
 const Information2 = () => {
   return (
     <div className="w-full max-w-[1536px] py-24 px-4 lg:px-20 xl:px-56">
-      <h1 className="text-center text-3xl md:text-[6vw] lg:text-5xl font-bold mb-12">
+      <h1
+        data-aos="zoom-in"
+        className="text-center text-3xl md:text-[6vw] lg:text-5xl font-bold mb-12">
         What things the website has?
       </h1>
       <Masonry
@@ -22,6 +24,7 @@ const Information2 = () => {
         {INFORMATION2.map((information) => {
           return (
             <div
+              data-aos="zoom-in"
               key={information.id}
               className="bg-background dark:bg-white shadow-2xl p-6 rounded-lg hover:-translate-y-4 duration-200">
               <information.icon className="text-3xl text-primary mb-4" />
