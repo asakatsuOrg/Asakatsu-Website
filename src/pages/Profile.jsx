@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import toast, { Toaster } from "react-hot-toast";
 
 // Redux
 import { userSelector } from "../redux/User/User-Selector";
@@ -16,13 +17,11 @@ import { AiFillDelete } from "react-icons/ai";
 import SocialMediaInputs from "../components/SocialMediaInputs";
 import PrivateAndDarkMode from "../components/PrivateAndDarkMode";
 import DeleteUser from "../components/DeleteUser";
-import IsSaved from "../components/IsSaved";
 
 const Profile = () => {
   const currentUser = useSelector(userSelector);
   const [userData, setUserData] = useState({});
   const [isDeleteOpen, setIsDeleteOpen] = useState(false);
-  const [isSaved, setIsSaved] = useState(false);
 
   const docRef = doc(db, "users", currentUser.uid);
 
@@ -35,55 +34,31 @@ const Profile = () => {
   const selectChangeHandler = () => {
     updateDoc(docRef, {
       private: !userData.private,
-    });
+    }).then(() => toast("file saved!"));
   };
 
   const twitterChangeHandler = (e) => {
     updateDoc(docRef, {
       twitter: e.target.value,
-    })
-      .then(() => setIsSaved(true))
-      .then(() => {
-        setTimeout(() => {
-          setIsSaved(false);
-        }, 1000);
-      });
+    }).then(() => toast("file saved!"));
   };
 
   const githubChangeHandler = (e) => {
     updateDoc(docRef, {
       github: e.target.value,
-    })
-      .then(() => setIsSaved(true))
-      .then(() => {
-        setTimeout(() => {
-          setIsSaved(false);
-        }, 1000);
-      });
+    }).then(() => toast("file saved!"));
   };
 
   const youtubeChangeHandler = (e) => {
     updateDoc(docRef, {
       youtube: e.target.value,
-    })
-      .then(() => setIsSaved(true))
-      .then(() => {
-        setTimeout(() => {
-          setIsSaved(false);
-        }, 1000);
-      });
+    }).then(() => toast("file saved!"));
   };
 
   const linkedinChangeHandler = (e) => {
     updateDoc(docRef, {
       linkedin: e.target.value,
-    })
-      .then(() => setIsSaved(true))
-      .then(() => {
-        setTimeout(() => {
-          setIsSaved(false);
-        }, 1000);
-      });
+    }).then(() => toast("file saved!"));
   };
 
   return (
@@ -144,7 +119,19 @@ const Profile = () => {
         />
       </div>
 
-      {isSaved && <IsSaved />}
+      <Toaster
+        position="top right"
+        toastOptions={{
+          className: "",
+          style: {
+            border: "1px solid green",
+            color: "green",
+          },
+        }}
+        containerStyle={{
+          top: 100,
+        }}
+      />
 
       <button
         onClick={() => setIsDeleteOpen(true)}
