@@ -31,7 +31,7 @@ In this project, everyone who will commit will have to do a thing or two every m
 
 ## 🧑 Demo
 
-Check out the website: [Asakatsu-Website](https://shimmering-croissant-124a34.netlify.app)
+Check out the website: [Asakatsu-Website](https://asakatsu-website.netlify.app/)
 
 ## 👇 Prerequisites
 
