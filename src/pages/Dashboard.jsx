@@ -37,7 +37,7 @@ const Dashboard = () => {
       <motion.div
         id="scrollBar"
         layout
-        className="bg-[#2F2F2F] dark:bg-[#f2f2f2] w-full max-w-[700px] h-[400px] flex flex-col rounded-lg overflow-x-hidden">
+        className="bg-[#2F2F2F] dark:bg-[#f2f2f2] w-full max-w-[700px] h-[75vh] flex flex-col rounded-lg overflow-x-hidden">
         <AnimatePresence>
           {usersData.map((userData) => {
             return (
